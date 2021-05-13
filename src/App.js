@@ -7,7 +7,7 @@ import Profile from './components/Profile/Profile';
 const App = () => {
   return (
     <div className='app-wrapper'>
-      <Header />
+      <Header head='my first cosial networl'/>
       <Navbar />
       <Profile />
     </div>);
