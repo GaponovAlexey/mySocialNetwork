@@ -2,9 +2,15 @@
     grid-area: n;
     background-color: rgb(129, 245, 239);
     border-radius: 5px;
+    padding: 30px;
+    
 }
 
-.item {
-    color: rgb(65, 7, 7);
+.item a {
+    color: white;
+    text-decoration: none;
 }
 
+.item a.activelink {
+    color: gold;
+}

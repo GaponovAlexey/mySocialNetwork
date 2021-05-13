@@ -1,6 +1,5 @@
 import React from 'react';
 import s from './Post.module.css';
-import l from './counter.jsx';
 
 const Post = (props) => {
 
@@ -11,10 +10,11 @@ const Post = (props) => {
       {props.da4a}
       <div>
         <span>
-         like
+          like {props.likesCount}
         </span>
       </div>
     </div>
   )
 }
+
 export default Post;
