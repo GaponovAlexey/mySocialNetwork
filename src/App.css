@@ -14,6 +14,6 @@
 }
 .app-wrapper-content {
     grid-area: c;
-    background-color: rgb(117, 230, 194);
+    background-color: #75f0d3 ;
     border-radius: 2px;
 }
