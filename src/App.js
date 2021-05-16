@@ -7,7 +7,7 @@ import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import Profile from './components/Profile/Profile';
 import {BrowserRouter, Route} from "react-router-dom";
-
+import Test from "./components/Navbar/Test/test";
 
 const App = () => {
   return (
@@ -20,6 +20,7 @@ const App = () => {
           <Route path='/profile' component={Profile}/>
           <Route path='/News' component={News}/>
           <Route path='/Music' component={Music}/>
+          <Route path='/Test' component={Test}/>
         </div>
       </div>
     </BrowserRouter>

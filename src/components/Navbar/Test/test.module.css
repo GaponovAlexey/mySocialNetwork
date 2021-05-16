@@ -1,0 +1,6 @@
+.tHeadClass {
+    display: grid;
+    grid-template-columns: 2fr 2fr; 
+    color: red;
+    border: 1px dashed #000;
+}
