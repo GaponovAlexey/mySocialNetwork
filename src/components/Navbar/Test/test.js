@@ -3,12 +3,12 @@ import s from './test.module.css';
 import { NavLink } from 'react-router-dom';
 
 const DatalogMan = (props) => {
-    //const path = '/Test/' + props.id;
+    const path = '/test/' + props.id;
     return (
         <div className={s.tHeadClass}>
-            {/*<NavLink to={path}>*/}
+            <NavLink to={path}>
                 {props.name}
-            {/*</NavLink>*/}
+            </NavLink>
         </div>
     )
 }
@@ -16,6 +16,7 @@ const DatalogWoman = (props) => {
     return (
         <div className={s.tHeadClass}>
             {props.name}
+            {props.id}
         </div>
     )
 }
@@ -32,10 +33,10 @@ const Test = (props) => {
     ];
     return (
         <div className={s.tHeadClass}>
-            <div>
+            <div className={s.one}>
                 <DatalogMan name={ManData[0].names} id={ManData[0].id} />
-                <DatalogMan name={ManData[1].names} id={ManData[0].id} />
-                <DatalogMan name={ManData[2].names} id={ManData[0].id} />
+                <DatalogMan name={ManData[1].names} id={ManData[1].id} />
+                <DatalogMan name={ManData[2].names} id={ManData[2].id} />
             </div>
             <div>
                 <DatalogWoman name={WomanData[0].names} id={WomanData[0].id} />
