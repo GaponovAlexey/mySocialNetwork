@@ -20,6 +20,7 @@ const DatalogWoman = (props) => {
         </div>
     )
 }
+
 const Test = (props) => {
     const ManData = [
         {id: 1, names: 'Aleksey' },

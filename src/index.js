@@ -4,12 +4,26 @@ import App from './App';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
+
+
+const posts = [
+  { id: -2, message: 'hi how are you Alexey', likesCount: 12 },
+  { id: -1, message: 'you', likesCount: 12 },
+  { id: 0, message: 'how are you mean', likesCount: 12 },
+  { id: 1, message: 'how are you', likesCount: 12 },
+  { id: 1, message: 'what did you mean', likesCount: 12 },
+  { id: 3, message: 'thank you man', likesCount: 12 },
+];
+
+
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App posts={posts} />
   </React.StrictMode>,
   document.getElementById('root')
 );
+
 const Data = (props) => {
     let message = [
       { id: 1, message: 'hi' },
