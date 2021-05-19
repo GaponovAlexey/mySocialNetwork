@@ -21,11 +21,9 @@ const App = (props) => {
         <div className='app-wrapper-content'>
           <Route path='/dialogs' render={ ( ) => <Dialogs dialogs={props.dialogs} message={props.message} />} />
           <Route path='/profile' render={ ( ) => <Profile posts={props.posts} />} />
-          {/*<Route path='/dialogs' component={Dialogs} />
-          <Route path='/profile' component={Profile}/>*/}
           <Route path='/News' component={News}/>
           <Route path='/Music' component={Music}/>
-          <Route path='/Test' component={Test}/>
+          <Route path='/Test' render={ ( ) => <Test WomanData={props.WomanData} ManData={props.ManData} />} />
         </div>
       </div>
     </BrowserRouter>

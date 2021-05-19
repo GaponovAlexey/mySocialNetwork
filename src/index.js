@@ -34,9 +34,22 @@ const dialogs = [
 
 
 
+    const ManData = [
+        { id: 1, name: 'Aleksey' },
+        { id: 2, name: 'Sergey' },
+        { id: 3, name: 'Churik' },
+    ];
+    const WomanData = [
+        { name: 'Viktoria', id: 1 },
+        { name: 'Vikusya', id: 2 },
+        { name: 'Vika', id: 3 },
+    ]
+
+
 ReactDOM.render(
   <React.StrictMode>
-    <App posts={posts} dialogs={dialogs} message={message} />
+    <App posts={posts} dialogs={dialogs} message={message}
+    ManData={ManData} WomanData={WomanData} />
   </React.StrictMode>,
   document.getElementById('root')
 );
