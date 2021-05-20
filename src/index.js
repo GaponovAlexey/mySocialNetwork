@@ -4,6 +4,7 @@ import App from './App';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import state from './Redux/State';
+import { BrowserRouter, Route } from "react-router-dom";
 
 
 
@@ -22,7 +23,9 @@ const WomanData = [
 
 ReactDOM.render(
   <React.StrictMode>
-    <App appState={state} ManData={ManData} WomanData={WomanData} />
+    <BrowserRouter>
+      <App state={state} ManData={ManData} WomanData={WomanData} />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
