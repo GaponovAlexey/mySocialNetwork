@@ -6,7 +6,7 @@ import Music from './components/Music/Music';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import Profile from './components/Profile/Profile';
-import {BrowserRouter, Route} from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import Test from "./components/Navbar/Test/test";
 
 //let Somecompany = (props) => <Dialogs dialogs={props.dialogs} message={props.message} />; 
@@ -19,11 +19,14 @@ const App = (props) => {
         <Header />
         <Navbar />
         <div className='app-wrapper-content'>
-          <Route path='/dialogs' render={ ( ) => <Dialogs dialogs={props.dialogs} message={props.message} />} />
-          <Route path='/profile' render={ ( ) => <Profile posts={props.posts} />} />
-          <Route path='/News' component={News}/>
-          <Route path='/Music' component={Music}/>
-          <Route path='/Test' render={ ( ) => <Test WomanData={props.WomanData} ManData={props.ManData} />} />
+          <Route path='/dialogs' render={() => <Dialogs
+            dialogs={props.appState.dialogs}
+            message={props.appState.message} />} />
+          <Route path='/profile' render={() => <Profile
+            posts={props.appState.posts} />} />
+          <Route path='/News' component={News} />
+          <Route path='/Music' component={Music} />
+          <Route path='/Test' render={() => <Test WomanData={props.WomanData} ManData={props.ManData} />} />
         </div>
       </div>
     </BrowserRouter>
