@@ -24,7 +24,7 @@ const App = (props) => {
           state={props.state.profilePage} />} />
         <Route path='/News' component={News} />
         <Route path='/Music' component={Music} />
-        <Route path='/Test' render={() => <Test WomanData={props.WomanData} ManData={props.ManData} />} />
+        <Route path='/Test' render={() => <Test state={props.state} />} />
       </div>
     </div>
   );

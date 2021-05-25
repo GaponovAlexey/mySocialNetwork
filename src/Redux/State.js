@@ -40,6 +40,18 @@ let state = {
       { id: 9, name: 'Maksim', butget: 2000, avans: 10000 },
       { id: 10, name: 'Denis', butget: 500, avans: 1000 },
     ],
+  },
+  forTest: {
+    ManData: [
+      { id: 1, name: 'Aleksey' },
+      { id: 2, name: 'Sergey' },
+      { id: 3, name: 'Churik' },
+    ],
+    WomanData: [
+      { name: 'Viktoria', id: 1 },
+      { name: 'Vikusya', id: 2 },
+      { name: 'Vika', id: 3 },
+    ],
   }
 }
 

@@ -9,22 +9,11 @@ import { BrowserRouter, Route } from "react-router-dom";
 
 
 
-const ManData = [
-  { id: 1, name: 'Aleksey' },
-  { id: 2, name: 'Sergey' },
-  { id: 3, name: 'Churik' },
-];
-const WomanData = [
-  { name: 'Viktoria', id: 1 },
-  { name: 'Vikusya', id: 2 },
-  { name: 'Vika', id: 3 },
-]
-
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App state={state} ManData={ManData} WomanData={WomanData} />
+      <App state={state} />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
