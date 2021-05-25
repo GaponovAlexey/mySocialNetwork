@@ -10,6 +10,7 @@ let state = {
       { id: 5, message: 'what did you mean', likesCount: 12 },
       { id: 6, message: 'thank you man', likesCount: 12 },
     ],
+    newPostText: 'it-kamasutra',
   },
   dialogsPage: {
     dialogs: [
