@@ -21,8 +21,8 @@ const Test = (props) => {
             </div>
         )
     }
-    let Man = props.state.forTest.WomanData.map(m => <DatalogMan name={m.name} id={m.id} />);
-    let Woman = props.state.forTest.ManData.map(m => <DatalogWoman name={m.name} id={m.id} />);
+    let Man = props.state.WomanData.map(m => <DatalogMan name={m.name} id={m.id} />);
+    let Woman = props.state.ManData.map(m => <DatalogWoman name={m.name} id={m.id} />);
     
 
 

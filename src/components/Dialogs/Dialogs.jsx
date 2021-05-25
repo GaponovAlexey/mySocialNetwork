@@ -2,7 +2,6 @@ import React from 'react';
 import s from './Dialogs.module.css';
 import DialogItem from './Dialogs/DialogsItem';
 import Message from './Message/Message';
-import Data from './../../index.js';
 
 const Dialogs = (props) => {
 
