@@ -6,23 +6,19 @@ import Post from './Post/Post';
 
 
 const MyPosts = (props) => {
-  let PostsElements = props.posts.map(m => <Post message={m.message} id={m.id} />)
+  let PostsElements = props.posts.map(p => <Post message={p.message} likesCount={p.likesCount} />)
 
   let newPostElement = React.createRef();
 
   let addPost = () => {
     let text = newPostElement.current.value;
     props.addPost(text);
-    newPostElement.current.value = '';
+    newPostElement.current.value = ' ';
   }
   let onPostChange = () => {
     let text = newPostElement.current.value;
-    console.log(text);
-    
-    
+    props.updateNewPostText(text);
   }
-  
-  
   return (
     <div className={s.postsBlock}>
       <h3>

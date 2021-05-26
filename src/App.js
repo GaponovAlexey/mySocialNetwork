@@ -11,7 +11,6 @@ import Test from "./components/Navbar/Test/test";
 
 
 const App = (props) => {
-
   return (
     <div className='app-wrapper'>
       <Header />
