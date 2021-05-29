@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './test.module.css';
 import { NavLink } from 'react-router-dom';
-import { updateNewMessageText, sendMessgeCreatorTest } from '../../../Redux/State';
+import { updateNewMessageText, sendMessgeCreatorTest } from '../../../Redux/test-reducer';
 
 
 const Test = (props) => {
