@@ -20,20 +20,22 @@ const App = (props) => {
         <Route path='/dialogs'
           render={() => <Dialogs
             store={props.store}
-          />}
-        />
+            />}
+            />
         <Route path='/profile'
           render={() => <Profile
             profilePage={props.state.profilePage}
             newPostText={props.state.newPostText}
             dispatch={props.dispatch}
-
-          />} />
+            
+            />} />
         <Route path='/News' component={News} />
         <Route path='/Music' component={Music} />
         <Route path='/Test'
           render={() => <Test
-            state={props.state.forTest} />} />
+            state={props.state.forTest} 
+            store={props.store}
+            />} />
       </div>
     </div>
   );

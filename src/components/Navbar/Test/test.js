@@ -1,9 +1,12 @@
 import React from 'react';
 import s from './test.module.css';
 import { NavLink } from 'react-router-dom';
+import { updateNewMessageText, sendMessgeCreatorTest } from '../../../Redux/State';
 
 
 const Test = (props) => {
+    let state = props.store.getState().forTest;
+
     const DatalogMan = (props) => {
         const path = '/test/' + props.id;
         return (
@@ -24,16 +27,29 @@ const Test = (props) => {
     let Man = props.state.WomanData.map(m => <DatalogMan name={m.name} id={m.id} />);
     let Woman = props.state.ManData.map(m => <DatalogWoman name={m.name} id={m.id} />);
     
+    let newMessageBodyTest = state.GenderText;
+    
+    let onNewMessageChengeTest = (e) => {
+        let test = e.target.value;
+        props.store.dispatch(updateNewMessageText(test))
+    };
+    let onSendMessageClickTest = () => {
+      props.store.dispatch(sendMessgeCreatorTest());
+    };
 
     return (
         <div className={s.tHeadClass}>
             <div>
-                <textarea>
-                    
-                </textarea>
+                <textarea 
+                value={newMessageBodyTest}
+                onChange={onNewMessageChengeTest}
+                placeholder='you man'
+                />
             </div>
             <div>
-                <button>
+                <button
+                onClick={onSendMessageClickTest}
+                >
                     clic
                 </button>
             </div>

@@ -3,6 +3,8 @@ const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_MESSAGE_BODY = 'UPDATE-NEW-MESSAGE-BODY';
 const SEND_MESSAGE = 'SEND-MESSAGE';
+const UPDATE_NEW_MESSAGE_TEST = 'UPDATE-NEW-MESSAGE-TEST';
+const SEND_MESSAGE_TEST = 'SEND_MESSAGE_TEST';
 
 
 let store = {
@@ -62,6 +64,7 @@ let store = {
         { name: 'Vikusya', id: 2 },
         { name: 'Vika', id: 3 },
       ],
+      GenderText: ''
     }
   },
   _callSubscriber() {
@@ -96,6 +99,14 @@ let store = {
       this._state.dialogsPage.newMessageBody = '';
       this._state.dialogsPage.message.push({ id: 7, message: body });
       this._callSubscriber(this._state);
+    } else if (action.type === UPDATE_NEW_MESSAGE_TEST) {
+      this._state.forTest.GenderText = action.test;
+      this._callSubscriber(this._state);
+    } else if (action.type === SEND_MESSAGE_TEST) {
+      let test = this._state.forTest.GenderText;
+      this._state.forTest.GenderText = '';
+      this._state.forTest.WomanData.push({ id: 4, name: test },)
+      this._callSubscriber(this._state);
     }
   },
 }
@@ -108,6 +119,11 @@ export const updatNewPostTextActionCreator = (text) => ({
 export const sendMessgeCreator = () => ({ type: SEND_MESSAGE });
 export const updateNewMessageBodyCreator = (body) => ({
   type: UPDATE_NEW_MESSAGE_BODY, body: body
+});
+
+export const sendMessgeCreatorTest = () => ({ type: SEND_MESSAGE_TEST});
+export const updateNewMessageText = (test) => ({
+  type: UPDATE_NEW_MESSAGE_TEST, test: test
 });
 
 
