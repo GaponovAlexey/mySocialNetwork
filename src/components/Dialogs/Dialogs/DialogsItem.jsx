@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import s from './../Dialogs.module.css';
-import Data from './../../../index.js';
 
 const DialogItem = (props) => {
     let path = "/dialogs/" + props.id;

@@ -1,21 +1,20 @@
-import s from './Profile.module.css';
 import MyPosts from './MyPosts/MyPosts';
+import dom from './Profile.module.css';
 import Profileinfo from './Profileinfo/Profileinfo';
 import React from 'react';
 
 
-
-
 const Profile = (props) => {
+  debugger;
   return (
     <div>
       <Profileinfo />
-      <MyPosts 
-      posts={props.profilePage.posts}
-      newPostText={props.profilePage.newPostText}
-      dispatch={props.dispatch}/>
+      <MyPosts
+        posts={props.profilePage}
+        newPostText={props.newPostText}
+        dispatch={props.dispatch} />
     </div>
   )
-}
+};
 
 export default Profile;

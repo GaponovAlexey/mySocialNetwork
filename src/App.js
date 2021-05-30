@@ -19,13 +19,14 @@ const App = (props) => {
       <div className='app-wrapper-content'>
         <Route path='/dialogs'
           render={() => <Dialogs
+            //store={props.state.dialogsReducer}
             store={props.store}
             />}
             />
         <Route path='/profile'
           render={() => <Profile
-            profilePage={props.state.profilePage}
-            newPostText={props.state.newPostText}
+            profilePage={props.state.profileReducer.posts}
+            newPostText={props.state.profileReducer.newPostText}
             dispatch={props.dispatch}
             
             />} />
@@ -33,7 +34,7 @@ const App = (props) => {
         <Route path='/Music' component={Music} />
         <Route path='/Test'
           render={() => <Test
-            state={props.state.forTest} 
+            state={props.state.testReducer}
             store={props.store}
             />} />
       </div>

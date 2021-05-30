@@ -5,7 +5,7 @@ import { updateNewMessageText, sendMessgeCreatorTest } from '../../../Redux/test
 
 
 const Test = (props) => {
-    let state = props.store.getState().forTest;
+    let state = props.store.getState().testReducer;
 
     const DatalogMan = (props) => {
         const path = '/test/' + props.id;
