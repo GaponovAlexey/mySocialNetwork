@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import Dialogs from './components/Dialogs/Dialogs';
 import News from './components/News/News';
 import Music from './components/Music/Music';
 import Header from './components/Header/Header';
@@ -8,6 +7,7 @@ import Navbar from './components/Navbar/Navbar';
 import Profile from './components/Profile/Profile';
 import { Route } from "react-router-dom";
 import Test from "./components/Navbar/Test/test";
+import DialogsConteiner from './components/Dialogs/DialogsConteiner';
 
 
 const App = (props) => {
@@ -18,18 +18,9 @@ const App = (props) => {
         state={props.state.sidebar} />} />
       <div className='app-wrapper-content'>
         <Route path='/dialogs'
-          render={() => <Dialogs
-            //store={props.state.dialogsReducer}
-            store={props.store}
-            />}
-            />
+          render={() => <DialogsConteiner store={props.store} />}/>
         <Route path='/profile'
-          render={() => <Profile
-            profilePage={props.state.profileReducer.posts}
-            newPostText={props.state.profileReducer.newPostText}
-            dispatch={props.dispatch}
-            
-            />} />
+          render={() => <Profile store={props.store} />} />
         <Route path='/News' component={News} />
         <Route path='/Music' component={Music} />
         <Route path='/Test'

@@ -5,21 +5,19 @@ import DialogItem from './Dialogs/DialogsItem';
 import Message from './Message/Message';
 
 const Dialogs = (props) => {
-  debugger;
-  let state = props.store.getState().dialogsReducer;
 
-  let DialogsElements = state.dialogs.map(d => <DialogItem name={d.name} id={d.id} />);
-  let MessageElement = state.message.map(m => <Message message={m.message} id={m.id} />);
-  let newMessageBody = state.newMessageBody;
+  let DialogsElements = props.state.dialogs.map(d => <DialogItem name={d.name} id={d.id} />);
+  let MessageElement = props.state.message.map(m => <Message message={m.message} id={m.id} />);
+  let newMessageBody = props.state.newMessageBody;
 
 
 
   let onSendMessageClick = () => {
-    props.store.dispatch(sendMessgeCreator());
+    props.onSendMessageClick();
   };
   let onNewMessageChenge = (e) => {
     let body = e.target.value;
-    props.store.dispatch(updateNewMessageBodyCreator(body));
+    props.onNewMessageChenge(body);
   }
 
   return (

@@ -36,7 +36,6 @@ const Test = (props) => {
     let onSendMessageClickTest = () => {
       props.store.dispatch(sendMessgeCreatorTest());
     };
-
     return (
         <div className={s.tHeadClass}>
             <div>
@@ -65,9 +64,4 @@ const Test = (props) => {
         </div>
     )
 }
-
 export default Test;
-
-setTimeout(function() {
-    console.log('hello');
-}, 1000)
