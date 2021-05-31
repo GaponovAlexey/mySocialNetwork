@@ -26,28 +26,28 @@ const Test = (props) => {
     }
     let Man = props.state.WomanData.map(m => <DatalogMan name={m.name} id={m.id} />);
     let Woman = props.state.ManData.map(m => <DatalogWoman name={m.name} id={m.id} />);
-    
+
     let newMessageBodyTest = state.GenderText;
-    
+
     let onNewMessageChengeTest = (e) => {
         let test = e.target.value;
         props.store.dispatch(updateNewMessageText(test))
     };
     let onSendMessageClickTest = () => {
-      props.store.dispatch(sendMessgeCreatorTest());
+        props.store.dispatch(sendMessgeCreatorTest());
     };
     return (
         <div className={s.tHeadClass}>
             <div>
-                <textarea 
-                value={newMessageBodyTest}
-                onChange={onNewMessageChengeTest}
-                placeholder='you man'
+                <textarea
+                    value={newMessageBodyTest}
+                    onChange={onNewMessageChengeTest}
+                    placeholder='you man'
                 />
             </div>
             <div>
                 <button
-                onClick={onSendMessageClickTest}
+                    onClick={onSendMessageClickTest}
                 >
                     clic
                 </button>
