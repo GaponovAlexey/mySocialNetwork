@@ -8,26 +8,19 @@ import Profile from './components/Profile/Profile';
 import { Route } from "react-router-dom";
 import Test from "./components/Navbar/Test/test";
 import DialogsConteiner from './components/Dialogs/DialogsConteiner';
-
+import MyPostsConteiner from './components/Profile/MyPosts/MyPostsConteiner';
 
 const App = (props) => {
   return (
     <div className='app-wrapper'>
       <Header />
-      <Navbar render={() => <Navbar
-        state={props.state.sidebar} />} />
+      <Navbar />
       <div className='app-wrapper-content'>
-        <Route path='/dialogs'
-          render={() => <DialogsConteiner store={props.store} />}/>
-        <Route path='/profile'
-          render={() => <Profile store={props.store} />} />
-        <Route path='/News' component={News} />
-        <Route path='/Music' component={Music} />
-        <Route path='/Test'
-          render={() => <Test
-            state={props.state.testReducer}
-            store={props.store}
-            />} />
+        <Route path='/dialogs' render={ () => <DialogsConteiner />} />
+        <Route path='/profile' render={ () => <MyPostsConteiner />}/>
+        <Route path='/News'  />
+        <Route path='/Music'  />
+        <Route path='/Test' />
       </div>
     </div>
   );
