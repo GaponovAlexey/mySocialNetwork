@@ -9,6 +9,7 @@ import { Route } from "react-router-dom";
 import Test from "./components/Navbar/Test/test";
 import DialogsConteiner from './components/Dialogs/DialogsConteiner';
 import MyPostsConteiner from './components/Profile/MyPosts/MyPostsConteiner';
+import UsersContainer from './components/Users/UsersContainer';
 
 const App = (props) => {
   return (
@@ -18,7 +19,7 @@ const App = (props) => {
       <div className='app-wrapper-content'>
         <Route path='/dialogs' render={ () => <DialogsConteiner />} />
         <Route path='/profile' render={ () => <MyPostsConteiner />}/>
-        <Route path='/users' render={ () => <div>users</div> }/>
+        <Route path='/users' render={ () => <UsersContainer />}/>
         <Route path='/News'  />
         <Route path='/Music'  />
         <Route path='/Test' />
