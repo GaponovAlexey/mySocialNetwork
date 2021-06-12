@@ -23,9 +23,6 @@ const App = (props) => {
         <Route path='/News'  />
         <Route path='/Music'  />
         <Route path='/Test' />
-        
-        
-        
       </div>
     </div>
   );
