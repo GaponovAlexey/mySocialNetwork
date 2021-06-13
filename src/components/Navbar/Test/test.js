@@ -15,9 +15,12 @@ const test = (props) => {
 		)
 	}
 	const DatalogWoman = (props) => {
+		const path = '/test/' + props.id;
 		return (
 			<div className={s.tHeadClass}>
-				{props.name}
+				<NavLink to={path}>
+					{props.name}
+				</NavLink>
 			</div>
 		)
 	}
