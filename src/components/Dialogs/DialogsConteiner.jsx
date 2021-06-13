@@ -3,12 +3,11 @@ import { sendMessgeCreator, updateNewMessageBodyCreator } from '../../Redux/dial
 import Dialogs from './Dialogs';
 import { connect } from 'react-redux';
 
+
 let mapStateToProps = (state) => {
-  debugger;
   return {
     state: state.dialogsReducer,
     newMessageBody: state.dialogsReducer.newMessageBody,
-
   }
 }
 let mapDispatchToProps = (dispatch) => {
@@ -21,8 +20,5 @@ let mapDispatchToProps = (dispatch) => {
     },
   }
 }
-
 const DialogsConteiner = connect(mapStateToProps, mapDispatchToProps)(Dialogs);
-
-
 export default DialogsConteiner;

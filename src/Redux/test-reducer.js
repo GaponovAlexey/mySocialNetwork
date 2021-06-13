@@ -18,13 +18,17 @@ let initialState = {
 const testReducer = (state = initialState, action) => {
   switch (action.type) {
     case UPDATE_NEW_MESSAGE_TEST:
-      state.GenderText = action.test;
-      return state;
+      return {
+        ...state,
+        GenderText: action.body,
+      }
     case SEND_MESSAGE_TEST:
       let test = state.GenderText;
-      state.GenderText = '';
-      state.WomanData.push({ id: 4, name: test },)
-      return state;
+      return {
+        ...state,
+        GenderText: "",
+        WomanData: [ ...state.WomanData, { id: 4, name: test }]
+      }
     default:
       return state;
   }
