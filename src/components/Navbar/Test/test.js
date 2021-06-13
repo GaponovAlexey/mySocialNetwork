@@ -1,10 +1,29 @@
 import React from 'react';
 import s from './test.module.css';
+import { NavLink } from 'react-router-dom';
 
 const test = (props) => {
 
-	let Man = props.DatalogMan.ManData.map(m => <dataMan name={m.name} id={m.id} />);
-	let Woman = props.DatalogWoman.WomanData.map(m => <dataWoman name={m.name} id={m.id} />);
+	const DatalogMan = (props) => {
+		const path = '/test/' + props.id;
+		return (
+			<div className={s.tHeadClass}>
+				<NavLink to={path}>
+					{props.name}
+				</NavLink>
+			</div>
+		)
+	}
+	const DatalogWoman = (props) => {
+		return (
+			<div className={s.tHeadClass}>
+				{props.name}
+			</div>
+		)
+	}
+
+	let Man = props.DatalogMan.ManData.map(m => <DatalogMan name={m.name} id={m.id} />);
+	let Woman = props.DatalogWoman.WomanData.map(m => <DatalogWoman name={m.name} id={m.id} />);
 
 	let newMessageBodyTest = props.GenderText;
 
