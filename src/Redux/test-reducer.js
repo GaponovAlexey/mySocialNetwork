@@ -27,6 +27,7 @@ const testReducer = (state = initialState, action) => {
         GenderText: "",
         ManData: [ ...state.WomanData, { id: 4, name: test }],
         WomanData: [ ...state.WomanData, { id: 4, name: test }]
+        
       }
     default:
       return state;
