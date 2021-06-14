@@ -3,21 +3,25 @@ import { updateNewMessageText, sendMessgeCreatorTest } from '../../../Redux/test
 import { connect } from 'react-redux';
 import test from './test'
 
-	let onNewMessageChengeTest = (state) => {
-		return {
-			//test: state.target.value,
-			DatalogMan: state.testReducer,
-			DatalogWoman: state.testReducer,
-		}
+let onNewMessageChengeTest = (state) => {
+	return {
+		//test: state.target.value,
+		state: state.testReducer,
+		DatalogMan: state.testReducer,
 	}
+}
 
 
-	let onSendMessageDispatchTest = (dispatch) => {
-		return {
-			sendMessgeCreatorTest: sendMessgeCreatorTest(dispatch),
-			updateNewMessageText: updateNewMessageText(dispatch)
-		}
+let onSendMessageDispatchTest = (dispatch) => {
+	return {
+		onSendMessageClickTest: () => {
+			dispatch(sendMessgeCreatorTest())
+		},
+		updateNewMessageText: (test) => {
+			dispatch(updateNewMessageText(test))
+		},
 	}
+}
 
 
 const testContainer = connect(onNewMessageChengeTest, onSendMessageDispatchTest)(test)

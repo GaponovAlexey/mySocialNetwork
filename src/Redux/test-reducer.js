@@ -1,6 +1,5 @@
 const UPDATE_NEW_MESSAGE_TEST = 'UPDATE-NEW-MESSAGE-TEST';
 const SEND_MESSAGE_TEST = 'SEND_MESSAGE_TEST';
-
 let initialState = {
   ManData: [
     { id: 1, name: 'Aleksey' },
@@ -14,7 +13,6 @@ let initialState = {
   ],
   GenderText: ''
 };
-
 const testReducer = (state = initialState, action) => {
   switch (action.type) {
     case UPDATE_NEW_MESSAGE_TEST:
@@ -27,6 +25,7 @@ const testReducer = (state = initialState, action) => {
       return {
         ...state,
         GenderText: "",
+        ManData: [ ...state.WomanData, { id: 4, name: test }],
         WomanData: [ ...state.WomanData, { id: 4, name: test }]
       }
     default:
@@ -34,8 +33,8 @@ const testReducer = (state = initialState, action) => {
   }
 };
 export const sendMessgeCreatorTest = () => ({ type: SEND_MESSAGE_TEST });
-export const updateNewMessageText = (test) => ({
-  type: UPDATE_NEW_MESSAGE_TEST, test: test
+export const updateNewMessageText = (body) => ({
+  type: UPDATE_NEW_MESSAGE_TEST, body: body
 });
 
 export default testReducer;

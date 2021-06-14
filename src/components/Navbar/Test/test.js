@@ -25,17 +25,16 @@ const test = (props) => {
 		)
 	}
 
-	let Man = props.DatalogMan.ManData.map(m => <DatalogMan name={m.name} id={m.id} />);
-	let Woman = props.DatalogWoman.WomanData.map(m => <DatalogWoman name={m.name} id={m.id} />);
-
+	let Man = props.state.ManData.map(m => <DatalogMan name={m.name} id={m.id} />);
+	let Woman = props.state.WomanData.map(m => <DatalogWoman name={m.name} id={m.id} />);
 	let newMessageBodyTest = props.GenderText;
 
-	let onNewMessageChengeTest = (e) => {
-		let test = e.target.value
-		props.sendMessgeCreatorTest(e)
+	let updateNewMessageText = (e) => {
+		let body = e.target.value
+		props.updateNewMessageText(body)
 	};
 	let onSendMessageClickTest = () => {
-		props.updateNewMessageText()
+		props.onSendMessageClickTest()
 	};
 
 	return (
@@ -43,7 +42,7 @@ const test = (props) => {
 			<div>
 				<textarea
 					value={newMessageBodyTest}
-					onChange={onNewMessageChengeTest}
+					onChange={updateNewMessageText}
 					placeholder='you man'
 				/>
 			</div>
