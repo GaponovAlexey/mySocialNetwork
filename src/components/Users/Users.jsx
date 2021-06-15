@@ -13,7 +13,13 @@ class Users extends React.Component {
 
 	render() {
 		return <div>
-			<button onClick={this.getUsersssss}>da</button>
+			<div>
+				<span>1</span>
+				<span className={stules.SeletedPage}>2</span>
+				<span>3</span>
+				<span>4</span>
+				<span>5</span>
+			</div>
 			{
 				this.props.users.map(u => <div key={u.id}>
 					<span>
@@ -28,7 +34,7 @@ class Users extends React.Component {
 					</span>
 					<span>
 						<span>
-							<div>{u.name}</div>
+							<div>{u.name}</div>f
 							<div>{u.uniqueUrlName}</div>
 						</span>
 						<span>
