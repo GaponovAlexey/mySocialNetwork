@@ -1,3 +1,4 @@
+
 .header {
     grid-area: h;
     background-color: rgb(54, 100, 112);
@@ -11,6 +12,6 @@
 .loginBlock {
     float: right;
 }
-.loginBlock a {
+.loginBlock NavLink {
     color: white;
 }

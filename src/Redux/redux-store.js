@@ -5,6 +5,7 @@ import sidebar from './sidebar-reducer';
 import testReducer from './test-reducer';
 import usersReducer from "./users-reducer";
 import authReducer from "./auth-reducer";
+import authNAVReducer from "./ayth-nav-reducer";
 
 let reducers = combineReducers({
     profilePage: profileReducer,
@@ -13,6 +14,7 @@ let reducers = combineReducers({
     testReducer: testReducer,
     usersPage: usersReducer,
     auth: authReducer,
+    authTwo: authNAVReducer,
 
 });
 

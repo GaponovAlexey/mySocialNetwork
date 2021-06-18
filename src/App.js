@@ -9,12 +9,15 @@ import DialogsConteiner from './components/Dialogs/DialogsConteiner';
 import UsersContainer from './components/Users/UsersContainer';
 import ProfileConteiner from './components/Profile/ProfileConteiner';
 import HeaderContainer from './components/Header/HeaderContainer';
+import NavbarConteiner from './components/Navbar/NavbarConteiner';
+
+
 
 const App = () => {
   return (
     <div className='app-wrapper'>
       <HeaderContainer path="" rener={ () => <HeaderContainer />} />
-      <Navbar />
+      <NavbarConteiner path="" rener={ () => <NavbarConteiner /> } />
       <div className='app-wrapper-content'>
         <Route path='/dialogs' render={ () => <DialogsConteiner />} />
         <Route path="/profile/:userId?" render={ () => <ProfileConteiner />}/>
