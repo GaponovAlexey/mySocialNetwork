@@ -12,7 +12,7 @@ class NavbarConteiner extends React.Component {
 			withCredentials: true
 		})
 		.then(response => {
-			if (response.data.resultCodt === 0) {
+			if (response.data.resultCode === 0) {
 				let {id, email, login} = response.data.data
 				this.props.setAuthUserDataNavbar(id, email, login)
 			}		

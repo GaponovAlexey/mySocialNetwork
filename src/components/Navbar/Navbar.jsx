@@ -4,12 +4,13 @@ import s from './Navbar.module.css';
 
 
 const Navbar = (props) => {
-debugger;
+  debugger;
   return (
     <nav className={ s.nav }>
-    <div>
-      {props.isAuth ? props.login : <NavLink to={'/login'}>login</NavLink>}
-    </div>
+      <div className={ s.loginBlock }>
+        { props.isAuth ? props.login
+          : <NavLink to={ '/login' }>login</NavLink> }
+      </div>
       <div className={ s.item }>
         <NavLink to="/profile/" activeClassName={ s.activelink }>Profile </NavLink>
       </div>

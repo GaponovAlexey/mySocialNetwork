@@ -11,6 +11,7 @@ let initialState = {
 
 
 const authNAVReducer = (state = initialState, action) => {
+	debugger;
 	switch (action.type) {
 		case SET_USER_DATA_NAVBAR:
 			return {
