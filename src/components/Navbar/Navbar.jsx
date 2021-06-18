@@ -3,12 +3,12 @@ import { NavLink } from 'react-router-dom';
 import s from './Navbar.module.css';
 
 
-const Navbar = (props) => {
+const Navbar = () => {
     
     return (
         <nav className={s.nav}>
             <div className={s.item}>
-                <NavLink to="/profile" activeClassName={s.activelink}>Profile </NavLink>
+                <NavLink to="/profile/" activeClassName={s.activelink}>Profile </NavLink>
             </div>
             <div className={`${s.item} ${s.active}`}>
                 <NavLink to="/dialogs" activeClassName={s.activelink}>Messages </NavLink>
