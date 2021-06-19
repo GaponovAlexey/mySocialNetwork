@@ -7,10 +7,6 @@ const Navbar = (props) => {
   debugger;
   return (
     <nav className={ s.nav }>
-      <div className={ s.loginBlock }>
-        { props.isAuth ? props.login
-          : <NavLink to={ '/login' }>login</NavLink> }
-      </div>
       <div className={ s.item }>
         <NavLink to="/profile/" activeClassName={ s.activelink }>Profile </NavLink>
       </div>
@@ -31,6 +27,13 @@ const Navbar = (props) => {
       </div>
       <div className={ s.item }>
         <NavLink to='users' activeClassName={ s.activelink } >Users</NavLink>
+      </div>
+      <div>
+        
+      </div>
+      <div className={ s.loginBlock }>
+        { props.isAuth ? props.login
+          : <NavLink to={ '/login' }>login</NavLink> }
       </div>
     </nav>
   )
