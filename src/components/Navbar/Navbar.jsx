@@ -4,7 +4,6 @@ import s from './Navbar.module.css';
 
 
 const Navbar = (props) => {
-  debugger;
   return (
     <nav className={ s.nav }>
       <div className={ s.item }>
@@ -12,6 +11,9 @@ const Navbar = (props) => {
       </div>
       <div className={ `${s.item} ${s.active}` }>
         <NavLink to="/dialogs" activeClassName={ s.activelink }>Messages </NavLink>
+      </div>
+      <div className={ s.item }>
+        <NavLink to='users' activeClassName={ s.activelink } >Users</NavLink>
       </div>
       <div className={ s.item }>
         <NavLink to='News' activeClassName={ s.activelink }>News</NavLink>
@@ -25,11 +27,10 @@ const Navbar = (props) => {
       <div className={ s.item }>
         <NavLink to='test' activeClassName={ s.activelink } >test</NavLink>
       </div>
-      <div className={ s.item }>
-        <NavLink to='users' activeClassName={ s.activelink } >Users</NavLink>
-      </div>
       <div>
-        
+        <br></br>
+        <br></br>
+        <br></br>
       </div>
       <div className={ s.loginBlock }>
         { props.isAuth ? props.login
