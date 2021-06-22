@@ -12,6 +12,6 @@
 .loginBlock {
     float: right;
 }
-.loginBlock NavLink {
+.loginBlock a {
     color: white;
 }
