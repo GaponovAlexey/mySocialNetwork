@@ -5,6 +5,8 @@ export const getUsers = (currentPage, pageSize) => {
 	{
 		withCredentials: true,
 	})
+
+	
 	.then(response => response.data)
 }
 
