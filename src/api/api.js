@@ -17,5 +17,9 @@ export const UserAPI = {
 		return instanse.get(`users?page=${currentPage}&count=${pageSize}`)
 			.then(response => response.data)
 	},
-	
+	getprofile: (userId) => {
+		return instanse.get('profile/' + userId)
+			.then(response => response)
+	}
+
 }
