@@ -9,17 +9,11 @@ import { UserAPI } from '../../api/api.js';
 class UsersConteiner extends React.Component {
   componentDidMount() {
     this.props.getUsers(this.props.currentPage, this.props.pageSize );
-
+    
   }
-
+  
   onPageChanged = (pageNumber) => {
-    this.props.setCurrentPage(pageNumber);
-    this.props.toggleIsFetching(true);
-    UserAPI.getUsers2(pageNumber, this.props.pageSize)
-      .then(data=> {
-        this.props.toggleIsFetching(false)
-        this.props.setUsers(data.items)
-      })
+    this.props.pageSize(pageNumber, this.props.pageSize)
   }
 
   render() {
@@ -48,7 +42,6 @@ let mapStateToProps = (state) => {
     currentPage: state.usersPage.currentPage,
     isFetching: state.usersPage.isFetching,
     followingInProgress: state.usersPage.followingInProgress,
-    
   }
 }
 

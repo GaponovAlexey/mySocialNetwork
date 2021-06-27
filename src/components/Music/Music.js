@@ -6,12 +6,18 @@ import React from 'react';
 
 const Music = () => {
     return (
-        ReactDOM.render(
-            <Game />,
-            document.getElementById('root')
-        )
+        <Game />
     )
 }
+
+//const Music = () => {
+//    return (
+//        ReactDOM.render(
+//            <Game />,
+//            document.getElementById('root')
+//        )
+//    )
+//}
 
 
 
