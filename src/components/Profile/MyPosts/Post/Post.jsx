@@ -5,7 +5,7 @@ const Post = (props) => {
 
   return (
     <div className={s.item}>
-      <img src='https://ru.bitcoinwiki.org/upload/ru/images/1/1d/Dogecoin-logo.jpg' />
+      <img src='https://www.block-chain24.com/sites/default/files/crypto/binance-coin-bnb-icon-dark-crey-256x256_0.svg' />
       {props.message}
       {props.da4a}
       <div>

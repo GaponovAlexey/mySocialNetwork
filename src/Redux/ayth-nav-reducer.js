@@ -1,3 +1,4 @@
+
 const SET_USER_DATA_NAVBAR = 'SET_USER_DATA_NAVBAR';
 
 
@@ -28,3 +29,5 @@ export const setAuthUserDataNavbar = (id, email, login) => ({ type: SET_USER_DAT
 
 
 export default authNAVReducer;
+
+
