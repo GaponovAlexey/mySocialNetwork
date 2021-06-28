@@ -1,9 +1,8 @@
 import React from 'react';
 import Profile from './Profile';
 import { connect } from 'react-redux';
-import { setUserProfile } from '../../Redux/profile-reducer';
 import { withRouter } from 'react-router-dom';
-import { UserAPI } from '../../api/api';
+import { getUserProfile } from '../../Redux/profile-reducer';
 
 
 class PofileContainer extends React.Component {
@@ -12,15 +11,8 @@ class PofileContainer extends React.Component {
     if (!userId) {
       userId = 17756;
     }
-    UserAPI.getprofile(userId)
-      .then(response => {
-        this.props.setUserProfile(response.data)
-      })
+    this.props.getUserProfile(userId);
   }
-
-  //axios.get(`https://social-network.samuraijs.com/api/1.0/profile/` + userId)
-  //  .then(response => {
-  //    this.props.setUserProfile(response.data)
 
   render() {
     return (
@@ -31,9 +23,6 @@ class PofileContainer extends React.Component {
 let mapStateToProps = (state) => ({
   profile: state.profilePage.profile
 })
-
 let WithUrlDataContainerComponent = withRouter(PofileContainer);
 
-export default connect(mapStateToProps, {
-  setUserProfile,
-})(WithUrlDataContainerComponent);
+export default connect(mapStateToProps, { getUserProfile })(WithUrlDataContainerComponent);
