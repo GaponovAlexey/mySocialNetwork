@@ -11,6 +11,7 @@ import ProfileConteiner from './components/Profile/ProfileConteiner';
 import HeaderContainer from './components/Header/HeaderContainer';
 import NavbarConteiner from './components/Navbar/NavbarConteiner';
 import KN from './components/Music/Music';
+import LoginPage from './components/Login/login';
 
 
 
@@ -26,7 +27,7 @@ const App = () => {
         <Route path='/users' render={ () => <UsersContainer />}/>
         <Route path='/Test' render={() => <TestConteiner />}/>
         <Route path='/News'  />
-        <Route path='/login'  />
+        <Route path='/login' render={ () => <LoginPage />} />
         <Route path='/Music' render={() => <KN />} />
       </div>
     </div>
