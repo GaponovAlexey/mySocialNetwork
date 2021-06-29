@@ -7,7 +7,6 @@ import Preolader from '../common/Preloader/Preloader';
 
 class UsersConteiner extends React.Component {
   componentDidMount() {
-    debugger;
     this.props.getUsers(this.props.currentPage, this.props.pageSize );
     
   }
