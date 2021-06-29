@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { followSuccess, unfollowSuccess, toggleIsfollowingProgress, getUsers } from '../../Redux/users-reducer';
 import Users from './users';
 import Preolader from '../common/Preloader/Preloader';
+import { Redirect } from 'react-router-dom';
 
 
 class UsersConteiner extends React.Component {
@@ -12,10 +13,10 @@ class UsersConteiner extends React.Component {
   }
   
   onPageChanged = (pageNumber) => {
-    this.props.pageSize(pageNumber)
+    this.props.getUsers(pageNumber, this.props.pageSize)
   }
-
   render() {
+    if (!this.props.isAuth) return <Redirect to='login' />
     return <>
       { this.props.isFetching ? <Preolader /> : null }
       <Users
@@ -32,6 +33,7 @@ class UsersConteiner extends React.Component {
   }
 }
 
+
 let mapStateToProps = (state) => {
   return {
     users: state.usersPage.users,
@@ -40,6 +42,7 @@ let mapStateToProps = (state) => {
     currentPage: state.usersPage.currentPage,
     isFetching: state.usersPage.isFetching,
     followingInProgress: state.usersPage.followingInProgress,
+    isAuth: state.auth.isAuth,
   }
 }
 
