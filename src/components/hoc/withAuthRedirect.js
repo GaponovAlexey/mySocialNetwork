@@ -5,11 +5,7 @@ import { Redirect } from "react-router-dom";
 let mapStateToPropsForRedirect = (state) => ({
 	isAuth: state.auth.isAuth,
 })
-
-
-
-
-
+// redirect 
 export const withAuthRedirect = (Component) => {
 	class RedirectComponent extends React.Component {
 		render() {

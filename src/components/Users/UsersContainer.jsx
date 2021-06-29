@@ -3,20 +3,20 @@ import { connect } from 'react-redux';
 import { followSuccess, unfollowSuccess, toggleIsfollowingProgress, getUsers } from '../../Redux/users-reducer';
 import Users from './users';
 import Preolader from '../common/Preloader/Preloader';
-import { Redirect } from 'react-router-dom';
+import { withAuthRedirect } from '../hoc/withAuthRedirect';
+import { compose } from 'redux';
 
 
 class UsersConteiner extends React.Component {
   componentDidMount() {
-    this.props.getUsers(this.props.currentPage, this.props.pageSize );
-    
+    this.props.getUsers(this.props.currentPage, this.props.pageSize);
+
   }
-  
+
   onPageChanged = (pageNumber) => {
     this.props.getUsers(pageNumber, this.props.pageSize)
   }
   render() {
-    if (!this.props.isAuth) return <Redirect to='login' />
     return <>
       { this.props.isFetching ? <Preolader /> : null }
       <Users
@@ -27,7 +27,7 @@ class UsersConteiner extends React.Component {
         users={ this.props.users }
         follow={ this.props.followSuccess }
         unfollow={ this.props.unfollowSuccess }
-        followingInProgress={ this.props.followingInProgress}
+        followingInProgress={ this.props.followingInProgress }
       />
     </>
   }
@@ -42,14 +42,11 @@ let mapStateToProps = (state) => {
     currentPage: state.usersPage.currentPage,
     isFetching: state.usersPage.isFetching,
     followingInProgress: state.usersPage.followingInProgress,
-    isAuth: state.auth.isAuth,
   }
 }
 
-export default connect(mapStateToProps, {
-  followSuccess, unfollowSuccess,
-  toggleIsfollowingProgress,
-  getUsers,
-})(UsersConteiner);
 
-
+export default compose(
+  connect(mapStateToProps, { followSuccess, unfollowSuccess, toggleIsfollowingProgress, getUsers }),
+    withAuthRedirect,
+  ) (UsersConteiner);

@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { Redirect, withRouter } from 'react-router-dom';
 import { getUserProfile } from '../../Redux/profile-reducer';
 import { withAuthRedirect } from '../hoc/withAuthRedirect';
+import { compose } from 'redux';
 
 
 class PofileContainer extends React.Component {
@@ -23,18 +24,23 @@ class PofileContainer extends React.Component {
 let mapStateToProps = (state) => ({
   profile: state.profilePage.profile,
 })
-let AuthRedirectComponent = withAuthRedirect (PofileContainer);
 
+//compose (
+//  withAuthRedirect,
+//  withRouter(AuthRedirectComponent);
+//) (
+//  WithUrlDataContainerComponent
+//)
+//let AuthRedirectComponent = withAuthRedirect (PofileContainer);
 
+//let WithUrlDataContainerComponent = withRouter(AuthRedirectComponent);
 
-//let mapStateToPropsForRedirect = (state) => ({
-  //isAuth: state.auth.isAuth,
-//})
-//AuthRedirectComponent = connect(mapStateToPropsForRedirect)(AuthRedirectComponent)
+//export default connect(mapStateToProps, { getUserProfile })(WithUrlDataContainerComponent);
 
-
-
-
-let WithUrlDataContainerComponent = withRouter(AuthRedirectComponent);
-
-export default connect(mapStateToProps, { getUserProfile })(WithUrlDataContainerComponent);
+export default compose(
+  withAuthRedirect,
+  withRouter,
+  connect(mapStateToProps, { getUserProfile })
+) (
+  PofileContainer
+)
