@@ -20,16 +20,20 @@ class PofileContainer extends React.Component {
     )
   }
 }
-let mapStateToPropsForRedirect = (state) => ({
-  isAuth: state.auth.isAuth,
-})
 let mapStateToProps = (state) => ({
   profile: state.profilePage.profile,
 })
-
-
 let AuthRedirectComponent = withAuthRedirect (PofileContainer);
-AuthRedirectComponent = connect(mapStateToPropsForRedirect)(AuthRedirectComponent)
+
+
+
+//let mapStateToPropsForRedirect = (state) => ({
+  //isAuth: state.auth.isAuth,
+//})
+//AuthRedirectComponent = connect(mapStateToPropsForRedirect)(AuthRedirectComponent)
+
+
+
 
 let WithUrlDataContainerComponent = withRouter(AuthRedirectComponent);
 
