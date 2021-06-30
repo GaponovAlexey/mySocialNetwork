@@ -1,9 +1,8 @@
 import React from 'react';
 import Profile from './Profile';
 import { connect } from 'react-redux';
-import { Redirect, withRouter } from 'react-router-dom';
-import { getUserProfile } from '../../Redux/profile-reducer';
-import { withAuthRedirect } from '../hoc/withAuthRedirect';
+import { withRouter } from 'react-router-dom';
+import { getStatus, getUserProfile, updateStatus } from '../../Redux/profile-reducer';
 import { compose } from 'redux';
 
 
@@ -14,33 +13,27 @@ class PofileContainer extends React.Component {
       userId = 17756;
     }
     this.props.getUserProfile(userId);
+    this.props.getStatus(userId)
   }
   render() {
     return (
-      <Profile { ...this.props } profile={ this.props.profile } />
+      <Profile { ...this.props }
+        profile={ this.props.profile }
+        status={ this.props.status }
+        updateStatus={ this.props.updateStatus }
+      />
     )
   }
 }
 let mapStateToProps = (state) => ({
   profile: state.profilePage.profile,
+  status: state.profilePage.status,
 })
-
-//compose (
-//  withAuthRedirect,
-//  withRouter(AuthRedirectComponent);
-//) (
-//  WithUrlDataContainerComponent
-//)
-//let AuthRedirectComponent = withAuthRedirect (PofileContainer);
-
-//let WithUrlDataContainerComponent = withRouter(AuthRedirectComponent);
-
-//export default connect(mapStateToProps, { getUserProfile })(WithUrlDataContainerComponent);
 
 export default compose(
   //withAuthRedirect,
   withRouter,
-  connect(mapStateToProps, { getUserProfile })
-) (
+  connect(mapStateToProps, { getUserProfile, getStatus, updateStatus })
+)(
   PofileContainer
 )

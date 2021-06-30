@@ -13,10 +13,6 @@ export const UserAPI = {
 		return instanse.get(`users?page=${currentPage}&count=${pageSize}`)
 			.then(response => response.data)
 	},
-	getUsers2: (currentPage, pageSize) => {
-		return instanse.get(`users?page=${currentPage}&count=${pageSize}`)
-			.then(response => response.data)
-	},
 	follow(userId) {
 		return instanse.post(`follow/${userId}`,)
 	},
@@ -24,10 +20,31 @@ export const UserAPI = {
 		return instanse.delete(`follow/${userId}`)
 	},
 	getProfile(userId) {
-		return instanse.get('profile/' + userId)
+		console.log('Obsolete method. Please profileAPI object')
+		return ProfileAPI.getProfile(userId)
 	},
 
 }
+
+
+
+
+export const ProfileAPI = {
+	getProfile(userId) {
+		return instanse.get('profile/' + userId)
+	},
+	getStatus(userId) {
+		return instanse.get('profile/status/' + userId)
+	},
+	updateStatus(status) {
+		return instanse.put('profile/status/', { status })
+	},
+}
+
+
+
+
+
 
 export const authAPI = {
 	me() {

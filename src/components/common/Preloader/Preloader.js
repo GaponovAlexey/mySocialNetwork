@@ -9,4 +9,3 @@ let Preolader = (props) => {
 }
 
 export default Preolader;
-	//return <div  style={{ backgroundColor: 'white'}}>

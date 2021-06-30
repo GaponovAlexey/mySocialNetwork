@@ -6,8 +6,11 @@ import React from 'react';
 const Profile = (props) => {
   return (
     <div>
-      <Profileinfo profile={props.profile} />
-      <MyPostsConteiner  />
+      <Profileinfo
+        profile={ props.profile }
+        status={ props.status }
+        updateStatus={ props.updateStatus } />
+      <MyPostsConteiner />
     </div>
   )
 };
