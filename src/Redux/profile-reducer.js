@@ -14,12 +14,10 @@ let initialState = {
     { id: 5, message: 'what did you mean', likesCount: 12 },
     { id: 6, message: 'thank you man', likesCount: 12 },
   ],
-  newPostText: 'it-kamasutra$',
+  newPostText: 'TekstKrutiwki',
   profile: null,
   status: '',
-
 };
-
 
 const profileReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -34,6 +32,7 @@ const profileReducer = (state = initialState, action) => {
         posts: [...state.posts, newPost],
         newPostText: '',
       };
+
     }
     case UPDATE_NEW_POST_TEXT: {
       return { ...state, newPostText: action.newText, };
@@ -54,13 +53,13 @@ export const setStatus = (status) => ({ type: SET_STATUS, status });
 
 // Thunks
 
-
 export const getUserProfile = (userId) => (dispatch) => {
   UserAPI.getProfile(userId)
     .then(response => {
       dispatch(setUserProfile(response.data))
     })
 }
+
 export const getStatus = (userId) => (dispatch) => {
   ProfileAPI.getStatus(userId).then(response => {
       dispatch(setStatus(response.data))
@@ -73,8 +72,4 @@ export const updateStatus = (status) => (dispatch) => {
     }
     })
 }
-
-
-
-
 export default profileReducer;
