@@ -1,30 +1,44 @@
 import axios from 'axios';
 import React from 'react';
 import { connect } from 'react-redux';
-import { setAuthUserDataNavbar } from '../../Redux/ayth-nav-reducer';
+import { withRouter } from 'react-router-dom';
+import { compose } from 'redux';
+import { getAuthUserData } from '../../Redux/auth-reducer';
+import { updateStatus } from '../../Redux/profile-reducer';
 import Navbar from './Navbar';
 
 
 
 class NavbarConteiner extends React.Component {
 	componentDidMount() {
-		axios.get(`https://social-network.samuraijs.com/api/1.0/auth/me`, {
-			withCredentials: true
-		})
-		.then(response => {
-			if (response.data.resultCode === 0) {
-				let {id, email, login} = response.data.data
-				this.props.setAuthUserDataNavbar(id, email, login)
-			}		
-		})
+		this.props.getAuthUserData();
 	}
+
+
 	render() {
-		return <Navbar {...this.props}/>
+		return (
+			<>
+				<Navbar
+					{ ...this.props }
+					profile={ this.props.profile }
+					status={ this.props.status }
+					updateStatus={ this.props.updateStatus } />
+			</>
+		)
 	}
 }
 const mapStateToProps = (state) => ({
-	isAuth: state.authTwo.isAuth,
-	login: state.authTwo.login
+	isAuth: state.auth.isAuth,
+	login: state.auth.login,
+	profile: state.profilePage.profile,
+	status: state.profilePage.status,
 })
 
-export default connect(mapStateToProps, { setAuthUserDataNavbar}) (NavbarConteiner);
+
+export default compose(
+	//withAuthRedirect,
+	withRouter,
+	connect(mapStateToProps, { getAuthUserData, updateStatus})
+)(
+	NavbarConteiner
+)

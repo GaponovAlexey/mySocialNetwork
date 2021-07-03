@@ -17,9 +17,7 @@ let initialState = {
   newPostText: 'it-kamasutra$',
   profile: null,
   status: '',
-
 };
-
 
 const profileReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -54,18 +52,19 @@ export const setStatus = (status) => ({ type: SET_STATUS, status });
 
 // Thunks
 
-
 export const getUserProfile = (userId) => (dispatch) => {
   UserAPI.getProfile(userId)
     .then(response => {
       dispatch(setUserProfile(response.data))
     })
 }
+
 export const getStatus = (userId) => (dispatch) => {
   ProfileAPI.getStatus(userId).then(response => {
       dispatch(setStatus(response.data))
     })
 }
+
 export const updateStatus = (status) => (dispatch) => {
   ProfileAPI.updateStatus(status).then(response => {
     if (response.data.resultCode === 0) {
@@ -73,8 +72,5 @@ export const updateStatus = (status) => (dispatch) => {
     }
     })
 }
-
-
-
 
 export default profileReducer;

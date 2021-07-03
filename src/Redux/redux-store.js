@@ -5,7 +5,6 @@ import sidebar from './sidebar-reducer';
 import testReducer from './test-reducer';
 import usersReducer from "./users-reducer";
 import authReducer from "./auth-reducer";
-import authNAVReducer from "./ayth-nav-reducer";
 import thunkMiddleware from "redux-thunk"
 
 let reducers = combineReducers({
@@ -15,7 +14,6 @@ let reducers = combineReducers({
     testReducer: testReducer,
     usersPage: usersReducer,
     auth: authReducer,
-    authTwo: authNAVReducer,
 
 });
 

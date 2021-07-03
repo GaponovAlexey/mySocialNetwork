@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import s from './Navbar.module.css';
+import NavbarStatus from './NavbarStatus';
 
 
 const Navbar = (props) => {
@@ -33,8 +34,17 @@ const Navbar = (props) => {
         { props.isAuth ? props.login
           : <NavLink to={ '/login' }>login</NavLink> }
       </div>
+      <br></br>
+      <br></br>
+      <br></br>
+      <div>
+        <NavbarStatus
+          profile={ props.profile }
+          status={ props.status }
+          updateStatus={ props.updateStatus }
+        />
+      </div>
     </nav>
   )
 }
-
 export default Navbar;

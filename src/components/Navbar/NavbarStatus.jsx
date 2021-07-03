@@ -1,8 +1,6 @@
 import React from 'react';
-import s from './Profileinfo.module.css';
 
-
-class ProfileStatus extends React.Component {
+class NavbarStatus extends React.Component {
 	state = {
 		editmode: false,
 		state: this.props.status,
@@ -15,30 +13,29 @@ class ProfileStatus extends React.Component {
 	}
 	deactivateEditMode = () => {
 		this.setState({
-			editmode: false
-		});
+			editmode: false,
+		})
 		this.props.updateStatus(this.state.status)
 	}
-	
 	onStatusChange = (e) => {
 		this.setState({
 			status: e.currentTarget.value
 		})
 	}
-	componentDidUpdate(prevProps, prevState) {
+	componentDidUpdate = (prevProps, prevState) => {
+		console.log('componentDidUpdate');
 		if (prevProps.status !== this.props.status) {
-			this.setState({status: this.props.status})
+			this.setState({ status: this.props.status })
 		}
 	}
-
 	render() {
 		return (
 			<div>
 				{ !this.state.editmode &&
 					<div>
-						<span onDoubleClick={ this.activateEditMode } > 
-							{this.props.status || 'No status' } 
-								</span>
+						<span onDoubleClick={ this.activateEditMode } >
+							{ this.props.status || 'No status' }
+						</span>
 					</div>
 				}
 				{ this.state.editmode &&
@@ -47,14 +44,12 @@ class ProfileStatus extends React.Component {
 							autoFocus={ true }
 							onBlur={ this.deactivateEditMode }
 							value={ this.state.status }
-							onChange={this.onStatusChange}
-							></input>
+							onChange={ this.onStatusChange }
+						></input>
 					</div>
 				}
 			</div >
 		)
 	}
 }
-export default ProfileStatus;
-
-
+export default NavbarStatus;

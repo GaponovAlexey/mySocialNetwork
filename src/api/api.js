@@ -6,7 +6,6 @@ const instanse = axios.create({
 	headers: { "API-KEY": "047f9a87-836b-4d5f-9fb8-73c0fc76332b" }
 })
 
-
 export const UserAPI = {
 
 	getUsers(currentPage, pageSize) {
@@ -23,11 +22,7 @@ export const UserAPI = {
 		console.log('Obsolete method. Please profileAPI object')
 		return ProfileAPI.getProfile(userId)
 	},
-
 }
-
-
-
 
 export const ProfileAPI = {
 	getProfile(userId) {
@@ -40,11 +35,6 @@ export const ProfileAPI = {
 		return instanse.put('profile/status/', { status })
 	},
 }
-
-
-
-
-
 
 export const authAPI = {
 	me() {
