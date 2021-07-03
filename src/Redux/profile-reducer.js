@@ -14,7 +14,7 @@ let initialState = {
     { id: 5, message: 'what did you mean', likesCount: 12 },
     { id: 6, message: 'thank you man', likesCount: 12 },
   ],
-  newPostText: 'it-kamasutra$',
+  newPostText: 'TekstKrutiwki',
   profile: null,
   status: '',
 };
@@ -32,6 +32,7 @@ const profileReducer = (state = initialState, action) => {
         posts: [...state.posts, newPost],
         newPostText: '',
       };
+
     }
     case UPDATE_NEW_POST_TEXT: {
       return { ...state, newPostText: action.newText, };
@@ -72,5 +73,4 @@ export const updateStatus = (status) => (dispatch) => {
     }
     })
 }
-
 export default profileReducer;
