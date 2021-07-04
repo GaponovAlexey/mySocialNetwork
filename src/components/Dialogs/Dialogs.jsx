@@ -9,10 +9,10 @@ const Dialogs = (props) => {
 
   let DialogsElements = props.dialogsPage.dialogs.map(d => <DialogItem name={d.name} key={d.id} id={d.id} />);
   let MessageElement = props.dialogsPage.message.map(m => <Message message={m.message} id={m.id} key={m.id} />);
-  let newMessageBody = props.newMessageBody;
 
 
   let sendMessage = (value) => {
+    debugger;
     props.sendMessage(value.newMessageBody);
   };
 
@@ -35,15 +35,15 @@ const Dialogs = (props) => {
 
 const AddMessageForm =(props) => {
   return (
-    <form onSubmit={ props.handleSubmit}>
+    <form onSubmit={ props.handleSubmit }>
       <div>
-        <Field name="firstName" component="input" placeholder="First Name" />
+        <Field component="textarea" name="newMessageBody"  placeholder="First Name" />
         </div>
-        <button > click </button>
+        <button> click </button>
     </form>
   )
 }
 
-const AddMessageFormRedux = reduxForm({form: 'dialogAddMessageForm'})(AddMessageForm)
+const AddMessageFormRedux = reduxForm({form: 'dialogAddMessageForm'})(AddMessageForm);
 
 export default Dialogs;
