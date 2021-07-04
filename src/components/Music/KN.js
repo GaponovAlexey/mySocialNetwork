@@ -4,23 +4,11 @@ import './kn.css';
 import React from 'react';
 
 
-const Music = () => {
+const KN = () => {
     return (
         <Game />
     )
 }
-
-//const Music = () => {
-//    return (
-//        ReactDOM.render(
-//            <Game />,
-//            document.getElementById('root')
-//        )
-//    )
-//}
-
-
-
 
 function Square(props) {
     return (
@@ -164,4 +152,4 @@ function calculateWinner(squares) {
 
 
 
-export default Music;
+export default KN;

@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import News from './components/News/News';
-import Music from './components/Music/Music';
+import Music from './components/Music/KN';
 import Navbar from './components/Navbar/Navbar';
 import { Route } from "react-router-dom";
 import TestConteiner from "./components/Navbar/Test/TestConteiner";
@@ -10,7 +10,7 @@ import UsersContainer from './components/Users/UsersContainer';
 import ProfileConteiner from './components/Profile/ProfileConteiner';
 import HeaderContainer from './components/Header/HeaderContainer';
 import NavbarConteiner from './components/Navbar/NavbarConteiner';
-import KN from './components/Music/Music';
+import KN from './components/Music/KN';
 import LoginPage from './components/Login/login';
 
 
@@ -28,7 +28,7 @@ const App = () => {
         <Route path='/Test' render={() => <TestConteiner />}/>
         <Route path='/News'  />
         <Route path='/login' render={ () => <LoginPage />} />
-        <Route path='/Music' render={() => <KN />} />
+        <Route path='/KN' render={() => <KN />} />
       </div>
     </div>
   );

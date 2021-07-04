@@ -20,7 +20,7 @@ const Navbar = (props) => {
         <NavLink to='News' activeClassName={ s.activelink }>News</NavLink>
       </div>
       <div className={ s.item }>
-        <NavLink to='Music' activeClassName={ s.activelink }>Игра - крест\нолик</NavLink>
+        <NavLink to='KN' activeClassName={ s.activelink }>Игра - крест\нолик</NavLink>
       </div>
       <div className={ s.item }>
         <NavLink to='test' activeClassName={ s.activelink } >test</NavLink>
