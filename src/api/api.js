@@ -41,3 +41,5 @@ export const authAPI = {
 		return instanse.get(`auth/me`)
 	},
 }
+
+//export const 
