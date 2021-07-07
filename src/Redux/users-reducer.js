@@ -90,7 +90,7 @@ export const follow = (userId ) => {
   return (dispatch) => {
     dispatch(toggleIsFetching(true, userId));
     UserAPI.follow(userId).then(response => {
-      if (response.data.resultCode == 0) {
+      if (response.data.resultCode === 0) {
         dispatch(followSuccess(userId));
       }
       dispatch(toggleIsfollowingProgress(false, userId))
