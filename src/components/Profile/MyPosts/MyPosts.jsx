@@ -7,21 +7,15 @@ import Post from './Post/Post';
 
 const MyPostsForm = (props) => {
   let PostsElements =
-    props.posts.map(p => <Post message={ p.message } key={ p.id } likesCount={ p.likesCount } />)
+    props.posts.map(p => <Post
+      message={ p.message || p.newmessagebody }
+      key={ p.id } 
+      likesCount={ p.likesCount } />)
 
   let newPostElement = React.createRef();
 
-  let onaddPost = () => {
-    props.addPost();
-  }
-
-
-  let onPostChange = () => {
-    let text = newPostElement.current.value;
-    props.updatNewPostText(text);
-  }
   return (
-    <form onSubmit={ props.handleSubmit}>
+    <form onSubmit={ props.handleSubmit }>
       <div className={ s.postsBlock }>
         <h3>
           My posts
@@ -29,15 +23,15 @@ const MyPostsForm = (props) => {
         <div>
           <div>
             <Field
-              component={'textarea'}
+              component={ 'textarea' }
               name='newmessagebody'
               placeholder='yes'
-              onChange={ onPostChange }
+              onChange={ '' }
               ref={ newPostElement }
               value={ props.newPostText } />
           </div>
           <div>
-            <button onClick={ onaddPost }>Add post</button>
+            <button >Add post</button>
           </div>
         </div>
         <div className={ s.posts }>
@@ -52,18 +46,19 @@ const MyPostsForm = (props) => {
 const MyPostsReuduxForm = reduxForm({ form: 'MyPost' })(MyPostsForm)
 
 const MyPosts = (props) => {
-  
-  const onSubmit = value => {
-    alert(value.newmessagebody);
+
+  let addPost = (value) => {
+    //alert(value.newmessagebody)
+    props.addPost(value.newmessagebody);
   }
   return (
     <div>
-      <MyPostsReuduxForm onSubmit={ onSubmit } 
-      posts={props.posts}
-      updatNewPostText={ props.updatNewPostText}
-      addPost={ props.addPost}
+      <MyPostsReuduxForm onSubmit={ addPost }
+        posts={ props.posts }
+        addPost={ props.addPost }
+        newmessagebody={ props.name }
       />
-      
+
     </div>
   )
 }
