@@ -9,13 +9,14 @@ const MyPostsForm = (props) => {
   let PostsElements =
     props.posts.map(p => <Post
       message={ p.message || p.newmessagebody }
-      key={ p.id } 
+      key={ p.id }
       likesCount={ p.likesCount } />)
 
   let newPostElement = React.createRef();
-
+  
+  const { handleSubmit} = props;
   return (
-    <form onSubmit={ props.handleSubmit }>
+    <form onSubmit={ handleSubmit }>
       <div className={ s.postsBlock }>
         <h3>
           My posts
