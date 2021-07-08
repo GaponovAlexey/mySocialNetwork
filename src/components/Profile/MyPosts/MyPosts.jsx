@@ -1,22 +1,15 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
+import { Textarea } from '../../common/FormsControl/FormsControl';
+import { maxLenghtCreator, required } from '../../utils/Validators/validators';
 import s from './MyPosts.module.css';
 import Post from './Post/Post';
 
-
+const MaxLenght = maxLenghtCreator(10);
 
 const MyPostsForm = (props) => {
-  let PostsElements =
-    props.posts.map(p => <Post
-      message={ p.message || p.newmessagebody }
-      key={ p.id }
-      likesCount={ p.likesCount } />)
-
-  let newPostElement = React.createRef();
-  
-  const { handleSubmit} = props;
   return (
-    <form onSubmit={ handleSubmit }>
+    <form onSubmit={ props.handleSubmit }>
       <div className={ s.postsBlock }>
         <h3>
           My posts
@@ -24,19 +17,15 @@ const MyPostsForm = (props) => {
         <div>
           <div>
             <Field
-              component={ 'textarea' }
+              component={ Textarea }
               name='newmessagebody'
               placeholder='yes'
-              onChange={ '' }
-              ref={ newPostElement }
-              value={ props.newPostText } />
+              validate={ [required, MaxLenght] }
+            />
+            <div>
+              <button >Add post</button>
+            </div>
           </div>
-          <div>
-            <button >Add post</button>
-          </div>
-        </div>
-        <div className={ s.posts }>
-          { PostsElements }
         </div>
       </div>
     </form>
@@ -46,20 +35,27 @@ const MyPostsForm = (props) => {
 
 const MyPostsReuduxForm = reduxForm({ form: 'MyPost' })(MyPostsForm)
 
-const MyPosts = (props) => {
+const MyPosts = props => {
+  debugger;
+  let PostsElements =
+    props.posts.map(p => <Post
+      message={ p.message || p.newmessagebody }
+      key={ p.id }
+      likesCount={ p.likesCount } />)
 
-  let addPost = (value) => {
+  let addPost = value => {
+    debugger;
     //alert(value.newmessagebody)
     props.addPost(value.newmessagebody);
   }
   return (
     <div>
       <MyPostsReuduxForm onSubmit={ addPost }
-        posts={ props.posts }
-        addPost={ props.addPost }
-        newmessagebody={ props.name }
+        value={ props.newPostText }
       />
-
+      <div className={ s.posts }>
+        { PostsElements }
+      </div>
     </div>
   )
 }
