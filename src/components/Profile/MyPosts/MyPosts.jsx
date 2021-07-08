@@ -36,7 +36,6 @@ const MyPostsForm = (props) => {
 const MyPostsReuduxForm = reduxForm({ form: 'MyPost' })(MyPostsForm)
 
 const MyPosts = props => {
-  debugger;
   let PostsElements =
     props.posts.map(p => <Post
       message={ p.message || p.newmessagebody }
@@ -44,8 +43,6 @@ const MyPosts = props => {
       likesCount={ p.likesCount } />)
 
   let addPost = value => {
-    debugger;
-    //alert(value.newmessagebody)
     props.addPost(value.newmessagebody);
   }
   return (
