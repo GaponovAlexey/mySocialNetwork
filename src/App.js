@@ -1,8 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
-import News from './components/News/News';
-import Music from './components/Music/KN';
-import Navbar from './components/Navbar/Navbar';
 import { Route, withRouter } from "react-router-dom";
 import TestConteiner from "./components/Navbar/Test/TestConteiner";
 import DialogsConteiner from './components/Dialogs/DialogsConteiner';
@@ -10,7 +7,7 @@ import UsersContainer from './components/Users/UsersContainer';
 import ProfileConteiner from './components/Profile/ProfileConteiner';
 import HeaderContainer from './components/Header/HeaderContainer';
 import NavbarConteiner from './components/Navbar/NavbarConteiner';
-import KN from './components/Music/KN';
+import KN from './components/KN/KN';
 import LoginPage from './components/Login/login';
 import { connect } from 'react-redux';
 import { initializeApp } from './Redux/App-reducer';
