@@ -5,14 +5,11 @@ const SET_USER_DATA = 'SET_USER_DATA';
 
 
 let initialState = {
-	email: null,
-	login: null,
-	isAuth: false,
-	id: null,
-	isFetching: false,
+	initialized: false,
+	
 };
 
-const authReducer = (state = initialState, action) => {
+const AppReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case SET_USER_DATA:
 			return {
@@ -61,4 +58,4 @@ export const logout = () => (dispatch) => {
 		})
 }
 
-export default authReducer;
+export default AppReducer;
