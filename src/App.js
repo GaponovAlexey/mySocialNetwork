@@ -13,7 +13,7 @@ import NavbarConteiner from './components/Navbar/NavbarConteiner';
 import KN from './components/Music/KN';
 import LoginPage from './components/Login/login';
 import { connect } from 'react-redux';
-import { getAuthUserData } from './Redux/App-reducer';
+import { getAuthUserData } from './Redux/auth-Reducer';
 import { compose } from 'redux';
 
 

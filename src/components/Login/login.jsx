@@ -4,7 +4,7 @@ import { Redirect } from 'react-router-dom';
 import { Field, reduxForm } from 'redux-form';
 import { Input } from '../common/FormsControl/FormsControl';
 import { maxLenghtCreator, required } from '../utils/Validators/validators';
-import { login } from '../../Redux/App-reducer'
+import { login } from '../../Redux/auth-Reducer'
 import style from './../../components/common/FormsControl/FormsControl.module.css'
 
 
