@@ -3,7 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { compose } from 'redux';
-import { getAuthUserData } from '../../Redux/auth-reducer';
+import { getAuthUserData } from '../../Redux/App-reducer';
 import { updateStatus } from '../../Redux/profile-reducer';
 import Navbar from './Navbar';
 

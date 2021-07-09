@@ -38,7 +38,7 @@ export default compose(
   
   withRouter,
   connect(mapStateToProps, { getUserProfile, getStatus, updateStatus }),
-  withAuthRedirect
+  //withAuthRedirect
 )(
   PofileContainer
 )
