@@ -10,7 +10,7 @@ import NavbarConteiner from './components/Navbar/NavbarConteiner';
 import KN from './components/KN/KN';
 import LoginPage from './components/Login/login';
 import { connect } from 'react-redux';
-import { initializeApp } from './Redux/App-reducer';
+import { initializeApp } from './Redux/appReducerNObag';
 import { compose } from 'redux';
 import Preolader from './components/common/Preloader/Preloader';
 
