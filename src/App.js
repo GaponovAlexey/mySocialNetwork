@@ -13,18 +13,23 @@ import NavbarConteiner from './components/Navbar/NavbarConteiner';
 import KN from './components/Music/KN';
 import LoginPage from './components/Login/login';
 import { connect } from 'react-redux';
-import { getAuthUserData } from './Redux/auth-Reducer';
+import { initializeApp } from './Redux/App-reducer';
 import { compose } from 'redux';
+import Preolader from './components/common/Preloader/Preloader';
 
 
 
 
-class App extends Component {
+class App extends React.Component {
   componentDidMount() {
-    this.props.getAuthUserData();
+    this.props.initializeApp();
   }
 
   render() {
+    if (!this.props.initialized) {
+      return <Preolader />
+    }
+
     return (
       <div className='app-wrapper'>
         <HeaderContainer path="" rener={ () => <HeaderContainer /> } />
@@ -42,8 +47,16 @@ class App extends Component {
     );
   }
 }
-export default compose(withRouter(connect(null,
-  { getAuthUserData })
+
+
+const mapStateToProps = (state) => ({
+  initialized: state.app.initialized,
+})
+
+
+
+export default compose(withRouter(connect(mapStateToProps,
+  { initializeApp })
   (App)));
 
 
