@@ -48,8 +48,7 @@ export const setStatus = (status) => ({ type: SET_STATUS, status });
 // Thunks
 
 export const getUserProfile = (userId) => (dispatch) => {
-  UserAPI.getProfile(userId)
-    .then(response => {
+  UserAPI.getProfile(userId).then(response => {
       dispatch(setUserProfile(response.data))
     })
 }
