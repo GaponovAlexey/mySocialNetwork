@@ -38,7 +38,7 @@ const MyPostsReuduxForm = reduxForm({ form: 'MyPost' })(MyPostsForm)
 
 const MyPosts = props => {
   let PostsElements =
-    [...props.posts].reverse()
+     [...props.posts].reverse()
       .map(p => <Post
       message={ p.message || p.newmessagebody }
       key={ p.id }
