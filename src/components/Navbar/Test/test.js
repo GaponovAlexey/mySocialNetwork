@@ -33,9 +33,7 @@ const test = (props) => {
 		let body = e.target.value
 		props.updateNewMessageText(body)
 	};
-	let onSendMessageClickTest = () => {
-		props.onSendMessageClickTest()
-	};
+	let sendMessge = () => {props.sendMessge()};
 
 	return (
 		<div className={s.tHeadClass}>
@@ -48,7 +46,7 @@ const test = (props) => {
 			</div>
 			<div>
 				<button
-					onClick={onSendMessageClickTest}
+					onClick={ sendMessge}
 				>
 					clic
 				</button>
