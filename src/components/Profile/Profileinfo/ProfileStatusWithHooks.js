@@ -14,6 +14,7 @@ const ProfileStatusWithHooks = (props) => {
 		}
 	}, [props.status])
 
+	
 
 	const activateEditMode = () => {
 		setEditMode(true);
