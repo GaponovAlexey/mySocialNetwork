@@ -1,6 +1,6 @@
 .tHeadClass {
     display: grid;
-    grid-template-columns: 1fr 0.4fr 1fr 1fr 1fr; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
     color: red;
-    /*border: 1px dashed #000;*/
+    border: 1px dashed #000;
 }

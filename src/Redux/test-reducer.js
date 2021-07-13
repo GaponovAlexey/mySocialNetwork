@@ -21,19 +21,18 @@ const testReducer = (state = initialState, action) => {
         GenderText: action.body,
       }
     case SEND_MESSAGE_TEST:
-      let test = state.GenderText;
+      let text = state.GenderText;
       return {
         ...state,
-        GenderText: "",
-        ManData: [ ...state.WomanData, { id: 4, name: test }],
-        WomanData: [ ...state.WomanData, { id: 4, name: test }]
+        //ManData: [...state.ManData, { id: 4, name: text }],
+        WomanData: [ ...state.WomanData, { id: 4, name: text }]
         
       }
     default:
       return state;
   }
 };
-export const sendMessgeCreatorTest = () => ({ type: SEND_MESSAGE_TEST });
+export const sendMessge = () => ({ type: SEND_MESSAGE_TEST, });
 export const updateNewMessageText = (body) => ({
   type: UPDATE_NEW_MESSAGE_TEST, body: body
 });

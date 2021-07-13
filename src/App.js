@@ -13,6 +13,7 @@ import { connect } from 'react-redux';
 import { initializeApp } from './Redux/appReducerNObag';
 import { compose } from 'redux';
 import Preolader from './components/common/Preloader/Preloader';
+import One from './components/verstka/One';
 
 
 
@@ -39,6 +40,7 @@ class App extends React.Component {
           <Route path='/News' />
           <Route path='/login' render={ () => <LoginPage /> } />
           <Route path='/KN' render={ () => <KN /> } />
+          <Route path='/one' render={ () => <One /> } />
         </div>
       </div>
     );
