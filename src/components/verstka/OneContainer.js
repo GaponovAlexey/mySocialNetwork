@@ -10,7 +10,6 @@ class OneContainer extends React.Component {
 		return (
 			<>
 			</>
-
 		)
 	}
 }

@@ -1,7 +1,7 @@
 import { stopSubmit } from "redux-form";
 import { authAPI } from "../api/api";
 
-const SET_USER_DATA = 'SET_USER_DATA';
+const SET_USER_DATA = 'mysocial/Network/Set_user_data';
 
 
 let initialState = {
@@ -30,15 +30,15 @@ export const setAuthUserData = (id, login, email, isAuth) => ({
 });
 
 
-export const getAuthUserData = () => (dispatch) => {
-	return authAPI.me()
-		.then(response => {
-			if (response.data.resultCode === 0) {
-				let { id, login, email } = response.data.data
-				dispatch(setAuthUserData(id, login, email, true))
-			}
-		})
-}
+export const getAuthUserData = () => async (dispatch) => {
+	let response = await authAPI.me()
+
+	if (response.data.resultCode === 0) {
+		let { id, login, email } = response.data.data
+		dispatch(setAuthUserData(id, login, email, true))
+	}
+};
+
 
 export const login = (email, password, rememberMe) => (dispatch) => {
 	authAPI.login(email, password, rememberMe)
