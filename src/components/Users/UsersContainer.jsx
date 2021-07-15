@@ -9,12 +9,13 @@ import { getcurrentPage, getUserse, getfollowingInProgress, getpageSize, getisFe
 
 class UsersConteiner extends React.Component {
   componentDidMount() {
-    this.props.requestUsers(this.props.currentPage, this.props.pageSize);
-
+    let { currentPage, pageSize, requestUsers } = this.props
+    requestUsers(currentPage, pageSize);
   }
 
   onPageChanged = (pageNumber) => {
-    this.props.requestUsers(pageNumber, this.props.pageSize)
+    let { pageSize, requestUsers} = this.props
+    requestUsers(pageNumber, pageSize)
   }
   render() {
     return <>
@@ -47,4 +48,4 @@ let mapStateToProps = (state) => {
 
 export default compose(
   connect(mapStateToProps, { followSuccess, unfollowSuccess, toggleIsfollowingProgress, requestUsers }),
-  ) (UsersConteiner);
+)(UsersConteiner);
