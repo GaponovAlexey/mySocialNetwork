@@ -8,6 +8,7 @@ import authReducer from "./auth-Reducer";
 import thunkMiddleware from "redux-thunk";
 import { reducer as formReducer } from 'redux-form';
 import appReducer from "./appReducerNObag";
+import OneR from "./verska-reducer";
 
 let reducers = combineReducers({
     profilePage: profileReducer,
@@ -18,6 +19,7 @@ let reducers = combineReducers({
     auth: authReducer,
     form: formReducer,
     app: appReducer,
+    oneR: OneR,
 
 });
 

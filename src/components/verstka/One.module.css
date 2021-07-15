@@ -7,3 +7,33 @@
 
 }
 
+/*.root {
+  flex-grow: 1; 
+}
+
+.mainFeaturesPost {
+  position: 'relative';
+  color: theme.palette.common.white;
+  marginBottom: theme.spacing(4);
+	backgroundSize: 'cover';
+  backgroundRepeat: 'no-repeat';
+  backgroundPosition: 'center';
+}
+
+.mainFeaturesPostContainer {
+	position: 'relative';
+	padding: spacing(6)';
+	marginTop: spacing(8);
+}
+
+.mainButton {
+	marginRight: spacing(1);
+}
+
+.cardGrid {
+	marginTop: spacing(4);
+}
+
+.CardMedia {
+	paddingTop: '56.25%';
+}*/

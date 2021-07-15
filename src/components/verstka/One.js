@@ -132,12 +132,9 @@ const One = () => {
 									</Button>
 									<LayerIcon />
 									<PlayCircleFilledIcon />
-
 								</CardActions>
 							</Grid>
-
 						)) }
-
 					</Grid>
 				</Container>
 			</main>
