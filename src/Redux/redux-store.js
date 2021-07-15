@@ -20,7 +20,6 @@ let reducers = combineReducers({
     form: formReducer,
     app: appReducer,
     oneR: OneR,
-
 });
 
 

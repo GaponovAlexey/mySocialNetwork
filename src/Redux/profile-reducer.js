@@ -35,7 +35,7 @@ const profileReducer = (state = initialState, action) => {
     case SET_USER_PROFILE:
       return { ...state, profile: action.profile }
     case SET_STATUS:
-      return { ...state, status: action.status}
+      return { ...state, status: action.status }
     default:
       return state;
   }
@@ -47,23 +47,19 @@ export const setStatus = (status) => ({ type: SET_STATUS, status });
 
 // Thunks
 
-export const getUserProfile = (userId) => (dispatch) => {
-  UserAPI.getProfile(userId).then(response => {
-      dispatch(setUserProfile(response.data))
-    })
+export const getUserProfile = (userId) => async (dispatch) => {
+  let response = await UserAPI.getProfile(userId)
+  dispatch(setUserProfile(response.data))
+}
+export const getStatus = (userId) => async (dispatch) => {
+  let response = await ProfileAPI.getStatus(userId)
+  dispatch(setStatus(response.data))
+}
+export const updateStatus = (status) => async (dispatch) => {
+  let response = await ProfileAPI.updateStatus(status)
+  if (response.data.resultCode === 0) {
+    dispatch(setStatus(status))
+  }
 }
 
-export const getStatus = (userId) => (dispatch) => {
-  ProfileAPI.getStatus(userId).then(response => {
-      dispatch(setStatus(response.data))
-    })
-}
-
-export const updateStatus = (status) => (dispatch) => {
-  ProfileAPI.updateStatus(status).then(response => {
-    if (response.data.resultCode === 0) {
-      dispatch(setStatus(status))
-    }
-    })
-}
 export default profileReducer;

@@ -24,7 +24,6 @@ const testReducer = (state = initialState, action) => {
       let text = state.GenderText;
       return {
         ...state,
-        //ManData: [...state.ManData, { id: 4, name: text }],
         WomanData: [ ...state.WomanData, { id: 4, name: text }]
         
       }

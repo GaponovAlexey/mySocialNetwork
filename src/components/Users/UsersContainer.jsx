@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux';
-import { followSuccess, unfollowSuccess, toggleIsfollowingProgress, getUsers } from '../../Redux/users-reducer';
+import { followSuccess, unfollowSuccess, toggleIsfollowingProgress, requestUsers } from '../../Redux/users-reducer';
 import Users from './users';
 import Preolader from '../common/Preloader/Preloader';
 import { compose } from 'redux';
@@ -9,12 +9,12 @@ import { getcurrentPage, getUserse, getfollowingInProgress, getpageSize, getisFe
 
 class UsersConteiner extends React.Component {
   componentDidMount() {
-    this.props.getUsers(this.props.currentPage, this.props.pageSize);
+    this.props.requestUsers(this.props.currentPage, this.props.pageSize);
 
   }
 
   onPageChanged = (pageNumber) => {
-    this.props.getUsers(pageNumber, this.props.pageSize)
+    this.props.requestUsers(pageNumber, this.props.pageSize)
   }
   render() {
     return <>
@@ -46,5 +46,5 @@ let mapStateToProps = (state) => {
 
 
 export default compose(
-  connect(mapStateToProps, { followSuccess, unfollowSuccess, toggleIsfollowingProgress, getUsers }),
+  connect(mapStateToProps, { followSuccess, unfollowSuccess, toggleIsfollowingProgress, requestUsers }),
   ) (UsersConteiner);
