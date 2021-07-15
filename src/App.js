@@ -61,23 +61,3 @@ export default compose(withRouter(connect(mapStateToProps,
 
 
 
-
-
-//const App = () => {
-//  return (
-//    <div className='app-wrapper'>
-//      <HeaderContainer path="" rener={ () => <HeaderContainer /> } />
-//      <NavbarConteiner path="" rener={ () => <NavbarConteiner /> } />
-//      <div className='app-wrapper-content'>
-//        <Route path='/dialogs' render={ () => <DialogsConteiner /> } />
-//        <Route path="/profile/:userId?" render={ () => <ProfileConteiner /> } />
-//        <Route path='/users' render={ () => <UsersContainer /> } />
-//        <Route path='/Test' render={ () => <TestConteiner /> } />
-//        <Route path='/News' />
-//        <Route path='/login' render={ () => <LoginPage /> } />
-//        <Route path='/KN' render={ () => <KN /> } />
-//      </div>
-//    </div>
-//  );
-//}
-//export default App;

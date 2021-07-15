@@ -1,4 +1,5 @@
 import React from 'react';
+import { Field } from 'redux-form';
 import s from "./FormsControl.module.css";
 
 
@@ -26,36 +27,12 @@ export const Input = (props) => {
 }
 
 
+export const CreateField = (placeholder, name, validate, component ) => {
+	<Field
+		placeholder={ placeholder }
+		name={ name }
+		component={ component }
+		validate={ validate } />
+}
 
 
-//export const Input = ({ input, meta, ...props }) => {
-//	const hasError = meta.touched && meta.error;
-//	return (
-//		<div className={ s.formControl + " " + (hasError ? s.error : " ") }>
-//			<div>
-//				<input { ...input } { ...props } />
-//			</div>
-//			{ hasError && <span>{ meta.error }</span> }
-//		</div>
-//	)
-//}
-
-
-//export const Element = Element => ({ input, meta, ...props }) => {
-//	const hasError = meta.touched && meta.error;
-//	return (
-//		<div className={ s.formControl + " " + (hasError ? s.error : "") }>
-//			<Element { ...input } { ...props } />
-//			{ hasError && <span> { meta.error } </span> }
-//		</div>
-//	);
-//};
-//А потом просто его импортим в компоненту формы, вызываем как
-
-//const Textarea = Element("textarea");
-
-//и передаем
-
-//	< Field component = { Textarea } .../>
-
-//Все работает!)
