@@ -1,4 +1,3 @@
-import React from 'react';
 import { updateNewMessageText, sendMessge } from '../../../Redux/test-reducer';
 import { connect } from 'react-redux';
 import test from './test'
@@ -11,19 +10,6 @@ let onNewMessageChengeTest = (state) => {
 	}
 }
 
-
-//let onSendMessageDispatchTest = (dispatch) => {
-//	return {
-//		onSendMessageClickTest: () => {
-//			dispatch(sendMessgeCreatorTest())
-//		},
-//		updateNewMessageText: (test) => {
-//			dispatch(updateNewMessageText(test))
-//		},
-//	}
-//}
-
 const testContainer = connect(onNewMessageChengeTest, { sendMessge, updateNewMessageText } )(test)
 
-//const testContainer = connect(onNewMessageChengeTest, onSendMessageDispatchTest)(test)
 export default testContainer;
