@@ -2,5 +2,4 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
     color: red;
-    border: 1px dashed #000;
 }
