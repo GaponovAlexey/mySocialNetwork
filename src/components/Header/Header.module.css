@@ -3,6 +3,12 @@
     grid-area: h;
     background-color: rgb(54, 100, 112);
     border-radius: 5px;
+    
+}
+.clock {
+    background-color: rgb(54, 100, 112);
+    border-radius: 5px;
+    color: red;
 }
 
 .header img {

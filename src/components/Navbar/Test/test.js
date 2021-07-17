@@ -7,9 +7,9 @@ const test = (props) => {
 	const DatalogMan = (props) => {
 		const path = '/test/' + props.id;
 		return (
-			<div className={s.tHeadClass}>
-				<NavLink to={path}>
-					{props.name}
+			<div className={ s.tHeadClass }>
+				<NavLink to={ path }>
+					{ props.name }
 				</NavLink>
 			</div>
 		)
@@ -17,48 +17,53 @@ const test = (props) => {
 	const DatalogWoman = (props) => {
 		const path = '/test/' + props.id;
 		return (
-			<div className={s.tHeadClass}>
-				<NavLink to={path}>
-					{props.name}
+			<div className={ s.tHeadClass }>
+				<NavLink to={ path }>
+					{ props.name }
 				</NavLink>
 			</div>
 		)
 	}
 
-	let Man = props.state.ManData.map(m => <DatalogMan name={m.name} id={m.id} />);
-	let Woman = props.state.WomanData.map(m => <DatalogWoman name={m.name} id={m.id} />);
+	let Man = props.state.ManData.map(m => <DatalogMan name={ m.name } id={ m.id } />);
+	let Woman = props.state.WomanData.map(m => <DatalogWoman name={ m.name } id={ m.id } />);
 	let newMessageBodyTest = props.GenderText;
 
 	let updateNewMessageText = (e) => {
 		let body = e.target.value
 		props.updateNewMessageText(body)
 	};
-	let sendMessge = () => {props.sendMessge()};
+	let sendMessge = () => { props.sendMessge() };
+
+
+
 
 	return (
-		<div className={s.tHeadClass}>
+		<div className={ s.tHeadClass }>
 			<div>
+				<div>
+				</div>
 				<textarea
-					value={newMessageBodyTest}
-					onChange={updateNewMessageText}
+					value={ newMessageBodyTest }
+					onChange={ updateNewMessageText }
 					placeholder='you man'
 				/>
 			</div>
 			<div>
 				<button
-					onClick={ sendMessge}
+					onClick={ sendMessge }
 				>
 					clic
 				</button>
 			</div>
-			<div className={s.one}>
-				{Man}
+			<div className={ s.one }>
+				{ Man }
 			</div>
 			<div>
-				{Woman}
+				{ Woman }
 			</div>
 			<div>
-				{Woman}
+				{ Woman }
 			</div>
 		</div>
 	)
