@@ -5,10 +5,11 @@
     border-radius: 5px;
     
 }
-.clock {
-    background-color: rgb(54, 100, 112);
-    border-radius: 5px;
-    color: red;
+.cloc1 {
+    font-size: 20px;
+    color: orangered;
+    opacity: 0.8;
+    
 }
 
 .header img {
