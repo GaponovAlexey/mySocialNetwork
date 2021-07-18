@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Route, withRouter } from "react-router-dom";
-import TestConteiner from "./components/Navbar/Test/TestConteiner";
+import TestConteiner from "./components/Test/TestConteiner";
 import DialogsConteiner from './components/Dialogs/DialogsConteiner';
 import UsersContainer from './components/Users/UsersContainer';
 import ProfileConteiner from './components/Profile/ProfileConteiner';
