@@ -2,7 +2,6 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Clock from '../utils/Validators/Clock';
 import s from './Navbar.module.css';
-import NavbarStatus from './NavbarStatus';
 
 
 
@@ -27,10 +26,10 @@ const Navbar = (props) => {
         <NavLink to='KN' activeClassName={ s.activelink }>Игра - крест\нолик</NavLink>
       </div>
       <div className={ s.item }>
-        <NavLink to='test' activeClassName={ s.activelink } >test</NavLink>
+        <NavLink to='test' activeClassName={ s.activelink } >Test/form/modules</NavLink>
       </div>
       <div className={ s.item }>
-        <NavLink to='one' activeClassName={ s.activelink } >one</NavLink>
+        <NavLink to='one' activeClassName={ s.activelink } >Верстка</NavLink>
       </div>
       <div>
         <br></br>
@@ -45,11 +44,7 @@ const Navbar = (props) => {
       <br></br>
       <br></br>
       <div>
-        <NavbarStatus
-          profile={ props.profile }
-          status={ props.status }
-          updateStatus={ props.updateStatus }
-        />
+        <Clock />
       </div>
     </nav>
   )
