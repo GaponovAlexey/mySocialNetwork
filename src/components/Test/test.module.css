@@ -1,5 +1,7 @@
 .tHeadClass {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
-    color: red;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color: peru;
+    text-align: center;
+    
 }
