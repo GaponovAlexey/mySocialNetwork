@@ -1,12 +1,8 @@
 .tHeadClass {
   display: grid;
-  grid-template-columns: 1fr 1fr 4fr;
+  grid-template-columns: 1fr 1fr auto;
 }
 
-.gif {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
 :target {
   color: red;
 }
@@ -66,4 +62,59 @@ th {
   max-height: 100px;
   background: chocolate;
   overflow: auto;
+  cursor: grab;
+}
+
+.flex div {
+  height: 40px;
+  width: 200px;
+  border: 1px rgb(233, 193, 193) solid;
+  display: inline-flex;
+  justify-content: space-between;
+  justify-content: space-around;
+  color: slateblue;
+}
+.grid__body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+}
+.grid__item {
+  margin: auto;
+  text-align: center;
+  border: 2px dashed blueviolet;
+  padding: 30px;
+}
+
+.grid__wrapper {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  grid-template-rows: 100px 1fr;
+  grid-template-areas:
+  "header header"
+  "side content";
+  
+  border: 2px dashed blueviolet;
+}
+
+.grid__header {
+  border: 2px dashed blueviolet;
+  grid-area: header;
+}
+
+.grid__side {
+  grid-area: side;
+  border: 2px dashed blueviolet;
+}
+
+.grid__header,
+.grid__side,
+.grid__content {
+  padding: 30px;
+  border: 2px dashed blueviolet;
+  margin: 0% 0% 15px 0%;
+  column-gap: 20px;
+}
+.grid__content {
+  grid-area: content;
 }

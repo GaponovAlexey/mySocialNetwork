@@ -63,8 +63,6 @@ const test = (props) => {
 				<div>
 				</div>
 			</div>
-			<div>
-			</div>
 			<body>
 				<fieldset>
 					<legend>Пол</legend>
@@ -76,8 +74,8 @@ const test = (props) => {
 				</fieldset>
 				<audio src={ poKaifu } controls preload="metadata"></audio>
 				<article className='gif'>
-					<video autoplay='on' loop src={ video } width="475"></video>
-					<video autoplay='on' loop src={ video } width="475"></video>
+					<video autoplay='on' loop src={ video } width="400"></video>
+					<video autoplay='on' loop src={ video } width="400"></video>
 				</article>
 				<article>
 					<div>
@@ -113,17 +111,17 @@ const test = (props) => {
 					<p>
 						<table className={ s.table } >
 							<tr>
-								<td>Animal</td>
-								<td>Tigre</td>
-								<td>anaconda</td>
-								<td>slon</td>
-								<td>leopard</td>
-								<td>jiraf</td>
-								<td>kozel</td>
-								<td>macaca</td>
-								<td>kinguru</td>
-								<td>cat</td>
-								<td>dog</td>
+								<td>table</td>
+								<td>table</td>
+								<td>table</td>
+								<td>table</td>
+								<td>table</td>
+								<td>table</td>
+								<td>table</td>
+								<td>table</td>
+								<td>table</td>
+								<td>table</td>
+								<td>table</td>
 							</tr>
 						</table>
 					</p>
@@ -161,10 +159,40 @@ const test = (props) => {
 						чтоб были у тебя, и все самые лучше самки, если мало идей, обращайся ко мне, я тебе на каждую твою идею предложу сотню триллионов, как всё делать. Ну а я всё, я иду как глубокий старец,узревший вечное, прикоснувшийся к Божественному, сам стал богоподобен и устремлен в это бесконечное, и который в умиротворении, покое, гармонии, благодати, в этом сокровенном блаженстве пребывает, вовлеченный во всё и во вся, понимаешь, вот и всё, в этом наша разница. Так что я иду любоваться мирозданием, а ты идёшь преисполняться в ГРАНЯХ каких-то, вот и вся разница, понимаешь, ты не зришь это вечное бесконечное, оно тебе не нужно. Ну зато ты, так сказать, более активен, как вот этот дятел долбящий, или муравей, который очень активен в своей стезе, поэтому давай, наши пути здесь, конечно, имеют грани подобия, потому что всё едино, но я-то тебя прекрасно понимаю, а вот ты меня - вряд ли, потому что я как бы тебя в себе содержу, всю твою природу, она составляет одну маленькую там песчиночку, от того что есть во мне, вот и всё, поэтому давай, ступай, езжай, а я пошел наслаждаться прекрасным осенним закатом на берегу теплой южной реки. Всё, ступай, и я пойду.
 					</box>
 				</div>
-				<div>
-					
-				</div>
 			</body>
+			<div>
+				<p>
+					<div className={ s.flex }>
+						<div className={ s.div1 }>flex-conteiner</div>
+						<div className={ s.div2 }>flex-conteiner</div>
+						<div className={ s.div3 }>flex-conteiner</div>
+						<div className={ s.div4 }>flex-conteiner</div>
+					</div>
+				</p>
+				<div className={ s.grid } >
+					<div className={ s.grid__body }>
+						<div className={ s.grid__item }>Display-Grid1</div>
+						<div className={ s.grid__item }>Display-Grid2</div>
+						<div className={ s.grid__item }>Display-Grid3</div>
+						<div className={ s.grid__item }>Display-Grid4</div>
+						<div className={ s.grid__item }>Display-Grid5</div>
+						<div className={ s.grid__item }>Display-Grid6</div>
+					</div>
+				</div>
+				<h2>Имена областей Grid</h2>
+				<div className={ s.grid__wrapper }>
+					<header className={ s.grid__header }>
+						Шапка
+					</header>
+					<aside className={ s.grid__side }>
+						Сайдбар
+					</aside>
+					<main className={ s.grid__content }>
+						Контент
+					</main>
+				</div>
+			</div >
+
 		</>
 	)
 }

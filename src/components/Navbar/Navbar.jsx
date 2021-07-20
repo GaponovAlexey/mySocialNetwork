@@ -23,10 +23,10 @@ const Navbar = (props) => {
         <NavLink to='News' activeClassName={ s.activelink }>News</NavLink>
       </div>
       <div className={ s.item }>
-        <NavLink to='KN' activeClassName={ s.activelink }>Игра - крест\нолик</NavLink>
+        <NavLink to='KN' activeClassName={ s.activelink }>Game-k/n</NavLink>
       </div>
       <div className={ s.item }>
-        <NavLink to='test' activeClassName={ s.activelink } >Test/form/modules</NavLink>
+        <NavLink to='test' activeClassName={ s.activelink } >html/css/form/modules</NavLink>
       </div>
       <div className={ s.item }>
         <NavLink to='one' activeClassName={ s.activelink } >Верстка</NavLink>
