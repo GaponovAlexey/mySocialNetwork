@@ -46,10 +46,24 @@ article span div {
   list-style-image: url(https://image.flaticon.com/icons/png/128/2058/2058943.png);
 }
 
-p table {
-  border: black 2px solid;
-  width: 150px;
-  height: 50px;
-  border-spacing: 10; 
-  border-collapse: separate ;
+.table {
+  border: black 1px solid;
+  width: 900px;
+  text-align: center;
+  table-layout: fixed;
+  cursor: grab;
+}
+td,
+th {
+  empty-cells: show;
+  border-collapse: collapse;
+  border: black 1px solid;
+}
+
+.silka {
+  max-width: max-content;
+  font-size: 20px;
+  max-height: 100px;
+  background: chocolate;
+  overflow: auto;
 }
