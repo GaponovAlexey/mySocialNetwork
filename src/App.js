@@ -14,6 +14,7 @@ import { initializeApp } from './Redux/appReducerNObag';
 import { compose } from 'redux';
 import Preolader from './components/common/Preloader/Preloader';
 import One from './components/verstka/One';
+import LearnJs from './components/Test/testJs/LearnJs'
 
 
 import store from './Redux/redux-store';
@@ -42,6 +43,7 @@ class App extends React.Component {
           <Route path="/profile/:userId?" render={ () => <ProfileConteiner /> } />
           <Route path='/users' render={ () => <UsersContainer /> } />
           <Route path='/Test' render={ () => <TestConteiner /> } />
+          <Route path='/LearnJs' render={ () => <LearnJs /> } />
           <Route path='/News' />
           <Route path='/login' render={ () => <LoginPage /> } />
           <Route path='/KN' render={ () => <KN /> } />

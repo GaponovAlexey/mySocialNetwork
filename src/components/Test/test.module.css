@@ -91,9 +91,9 @@ th {
   grid-template-columns: 150px 1fr;
   grid-template-rows: 100px 1fr;
   grid-template-areas:
-  "header header"
-  "side content";
-  
+    "header header"
+    "side content";
+
   border: 2px dashed blueviolet;
 }
 
@@ -117,4 +117,20 @@ th {
 }
 .grid__content {
   grid-area: content;
+}
+
+.cont {
+  perspective: 800px;
+  width: 250px;
+  height: 250px;
+  background-color: yellow;
+  transform: rotateX(45deg);
+  margin: 20px 0 0 150px;
+  transform-style: preserve-3d;
+}
+.ch {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  transform: translate3d(50px, 50px, 100px);
 }
