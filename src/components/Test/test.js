@@ -27,6 +27,9 @@ const test = (props) => {
 		)
 	}
 
+
+
+	
 	let Man = props.state.ManData.map(m => <DatalogMan name={ m.name } id={ m.id } />);
 	let Woman = props.state.WomanData.map(m => <DatalogWoman name={ m.name } id={ m.id } />);
 	let newMessageBodyTest = props.GenderText;
