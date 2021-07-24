@@ -11,7 +11,6 @@ let initialState = {
     { name: 'Vikusya', id: 2 },
     { name: 'Vika', id: 3 },
   ],
-  GenderText: ''
 };
 const testReducer = (state = initialState, action) => {
   switch (action.type) {

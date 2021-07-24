@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import { Route, withRouter } from "react-router-dom";
-import TestConteiner from "./components/Test/TestConteiner";
 import DialogsConteiner from './components/Dialogs/DialogsConteiner';
 import UsersContainer from './components/Users/UsersContainer';
 import ProfileConteiner from './components/Profile/ProfileConteiner';
@@ -14,7 +13,8 @@ import { initializeApp } from './Redux/appReducerNObag';
 import { compose } from 'redux';
 import Preolader from './components/common/Preloader/Preloader';
 import One from './components/verstka/One';
-import LearnJs from './components/Test/testJs/LearnJs'
+import TestConteiner from "./components/Test/testJs/TestConteiner";
+import LearnJs from './components/Test/LearnJs/LearnJs'
 
 
 import store from './Redux/redux-store';

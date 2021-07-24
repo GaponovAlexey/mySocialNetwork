@@ -1,4 +1,4 @@
-import { updateNewMessageText, sendMessge } from '../../Redux/test-reducer';
+import { updateNewMessageText, sendMessge } from '../../../Redux/test-reducer';
 import { connect } from 'react-redux';
 import test from './test'
 

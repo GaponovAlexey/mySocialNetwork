@@ -1,8 +1,8 @@
 import React from 'react';
 import s from './test.module.css';
 import { NavLink } from 'react-router-dom';
-import poKaifu from '../../asets/music/mp3/poKaifu.mp3';
-import video from '../../asets/images/video.mp4';
+import poKaifu from '../../../asets/music/mp3/poKaifu.mp3';
+import video from '../../../asets/images/video.mp4';
 
 const test = (props) => {
 
@@ -26,13 +26,10 @@ const test = (props) => {
 			</div>
 		)
 	}
-
-
-
 	
 	let Man = props.state.ManData.map(m => <DatalogMan name={ m.name } id={ m.id } />);
 	let Woman = props.state.WomanData.map(m => <DatalogWoman name={ m.name } id={ m.id } />);
-	let newMessageBodyTest = props.GenderText;
+	let newMessageBodyTest = '';
 
 	let updateNewMessageText = (e) => {
 		let body = e.target.value
