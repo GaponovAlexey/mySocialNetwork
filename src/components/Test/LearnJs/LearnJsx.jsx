@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './LearnJs.module.css';
+//import style from './LearnJs.module.css';
 
 let Study = () => {
 	return (

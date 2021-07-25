@@ -1,5 +1,4 @@
 
-import ReactDOM from 'react-dom';
 import './kn.css';
 import React from 'react';
 

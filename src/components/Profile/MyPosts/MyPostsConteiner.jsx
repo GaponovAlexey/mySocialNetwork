@@ -1,5 +1,5 @@
-import React from 'react';
-import { addPostActionCreator, updatNewPostTextActionCreator } from '../../../Redux/profile-reducer';
+//import React from 'react';
+import { addPostActionCreator } from '../../../Redux/profile-reducer';
 import MyPosts from './MyPosts.jsx';
 import { connect } from 'react-redux';
 

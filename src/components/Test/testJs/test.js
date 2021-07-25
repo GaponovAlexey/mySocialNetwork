@@ -58,8 +58,7 @@ const test = (props) => {
 					{ Woman }
 				</div>
 				<div className={ s.one }>
-					<iframe width="700"
-						height="300" src='http://localhost:3000/one' srcdoc />
+					<iframe title="This is a title" width="700" height="300" alt='local' src='http://localhost:3000/one' srcdoc />
 				</div>
 				<div>
 				</div>

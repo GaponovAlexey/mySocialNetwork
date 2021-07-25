@@ -19,7 +19,7 @@ const Profileinfo = (props) => {
         <h2>Имя: { props.profile.fullName }</h2>
         <h2>{ props.profile.aboutMe }</h2>
         <h2>Цель: { props.profile.lookingForAJobDescription }</h2>
-        <img src={ props.profile.photos.large } />
+        <img alt='fotoLogo' src={ props.profile.photos.large } />
 
       </div>
     </div>

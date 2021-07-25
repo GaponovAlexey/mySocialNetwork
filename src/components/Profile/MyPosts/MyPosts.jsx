@@ -1,5 +1,4 @@
 import React  from 'react';
-import { memo, PureComponent } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { Textarea } from '../../common/FormsControl/FormsControl';
 import { maxLenghtCreator, required } from '../../utils/Validators/validators';

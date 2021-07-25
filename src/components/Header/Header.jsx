@@ -8,7 +8,7 @@ const Header = (props) => {
         </div>
         <header className={ s.header }>
             <span>
-                <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/320px-React-icon.svg.png' />
+                <img alt='logo' src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/320px-React-icon.svg.png' />
             </span>
             <div className={ s.loginBlock }>
                 { props.isAuth
