@@ -10,7 +10,7 @@ let Three = () => {
 
 	return (<>
 		<form onSubmit={ handleSubmit } >
-			<button type='submit' > you</button>
+			<button> Submit </button>
 		</form>
 
 	</>)

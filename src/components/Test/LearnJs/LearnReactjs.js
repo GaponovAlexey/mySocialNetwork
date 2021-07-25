@@ -6,7 +6,9 @@ import Three from './Learn/3form is submit';
 import OffOn from './Learn/4off-on';
 import LoginControl from './Learn/5login';
 import Mailbox from './Learn/6myLogin';
-import MyMailBox from './Learn/74toto';
+import MyMailBox from './Learn/7count';
+import Submit from './Learn/8Mailbox';
+import WarningBanner from './Learn/9Warning';
 
 
 const LearnJs = () => {
@@ -52,6 +54,9 @@ const LearnJs = () => {
 
 		<Mailbox />
 		<MyMailBox />
+		<Submit />
+		<WarningBanner />
+		
 
 
 
