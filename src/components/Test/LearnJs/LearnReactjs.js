@@ -10,6 +10,8 @@ import MyMailBox from './Learn/7count';
 import Submit from './Learn/8Mailbox';
 import WarningBanner from './Learn/9Warning';
 import Map from './Learn/10set';
+import Blog from './Learn/11key';
+import Form from './Learn/12forms';
 
 
 const LearnJs = () => {
@@ -58,6 +60,8 @@ const LearnJs = () => {
 		<Submit />
 		<WarningBanner />
 		<Map />
+		<Blog />
+		<Form />
 
 
 
