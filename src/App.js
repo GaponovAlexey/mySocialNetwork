@@ -14,12 +14,13 @@ import { compose } from 'redux';
 import Preolader from './components/common/Preloader/Preloader';
 import One from './components/verstka/One';
 import TestConteiner from "./components/Test/testJs/TestConteiner";
-import LearnJs from './components/Test/LearnJs/LearnJs'
+import LearnReactjs from './components/Test/LearnJs/LearnReactjs';
 
 
 import store from './Redux/redux-store';
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from 'react-redux';
+import Study from './components/Test/LearnJs/LearnJsx.jsx';
 
 
 
@@ -43,7 +44,8 @@ class App extends React.Component {
           <Route path="/profile/:userId?" render={ () => <ProfileConteiner /> } />
           <Route path='/users' render={ () => <UsersContainer /> } />
           <Route path='/Test' render={ () => <TestConteiner /> } />
-          <Route path='/LearnJs' render={ () => <LearnJs /> } />
+          <Route path='/ReactJs' render={ () => <LearnReactjs /> } />
+          <Route path='/LearnJsx' render={ () => <Study /> } />
           <Route path='/News' />
           <Route path='/login' render={ () => <LoginPage /> } />
           <Route path='/KN' render={ () => <KN /> } />

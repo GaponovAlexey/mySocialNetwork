@@ -29,7 +29,10 @@ const Navbar = (props) => {
         <NavLink to='test' activeClassName={ s.activelink } >html/css/form/mod</NavLink>
       </div>
       <div className={ s.item }>
-        <NavLink to='LearnJs' activeClassName={ s.activelink } >LearnJs</NavLink>
+        <NavLink to='Reactjs' activeClassName={ s.activelink } >LearnReactjs</NavLink>
+      </div>
+      <div className={ s.item }>
+        <NavLink to='LearnJsx' activeClassName={ s.activelink } >LearnJs</NavLink>
       </div>
       <div className={ s.item }>
         <NavLink to='one' activeClassName={ s.activelink } >Верстка</NavLink>
