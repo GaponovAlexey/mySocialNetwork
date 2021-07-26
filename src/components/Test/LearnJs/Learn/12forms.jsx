@@ -13,16 +13,17 @@ import React from 'react';
 //}
 
 
+
 class NameForm extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {value: ''};
+		this.state = { value: '' };
 
 		this.handleChange = this.handleChange.bind(this)
 		this.handleSubmit = this.handleSubmit.bind(this)
 	}
 	handleChange(e) {
-		this.setState({value: e.target.value});
+		this.setState({ value: e.target.value });
 	}
 
 	handleSubmit(e) {
@@ -31,16 +32,20 @@ class NameForm extends React.Component {
 	}
 
 	render() {
-		return(
-			<form onSubmit={this.handleSubmit}>
-				<label>
-					name:
-					<input type='text' value={this.state.value}
-					onChange={this.handleChange}
-					/>
-				</label>
-				<input type='submit' value='send' />
-			</form>
+		return (
+			<div>
+
+				<form onSubmit={ this.handleSubmit }>
+					<label>
+						name:
+						<input type='text' value={ this.state.value }
+							onChange={ this.handleChange }
+						/>
+					</label>
+					<input type='submit' value='send' />
+				</form>
+				<div>{this.state.value}</div>
+			</div>
 		)
 	}
 
@@ -49,4 +54,4 @@ class NameForm extends React.Component {
 
 
 
-export default NameForm ;
+export default NameForm;

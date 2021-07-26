@@ -11,6 +11,7 @@ let initialState = {
     { name: 'Vikusya', id: 2 },
     { name: 'Vika', id: 3 },
   ],
+  GenderText: '',
 };
 const testReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -23,6 +24,7 @@ const testReducer = (state = initialState, action) => {
       let text = state.GenderText;
       return {
         ...state,
+        GenderText: "",
         WomanData: [ ...state.WomanData, { id: 4, name: text }]
         
       }
