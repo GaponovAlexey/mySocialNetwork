@@ -9,7 +9,7 @@ import thunkMiddleware from "redux-thunk";
 import { reducer as formReducer } from 'redux-form';
 import appReducer from "./appReducerNObag";
 import OneR from "./verska-reducer";
-import jsreducer from './jsreducer';
+import toolkitSlice from '../components/Test/LearnJs/Js/toolkitSlice';
 
 let reducers = combineReducers({
     profilePage: profileReducer,
@@ -21,13 +21,17 @@ let reducers = combineReducers({
     form: formReducer,
     app: appReducer,
     oneR: OneR,
-    main: jsreducer,
+    toolkit: toolkitSlice,
 
 });
 
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = createStore(reducers, composeEnhancers(applyMiddleware(thunkMiddleware)));
+//const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+//const store = createStore(reducers, composeEnhancers(applyMiddleware(thunkMiddleware)));
+
+const store = configureStore ({
+    reducer: reducers
+})
 
 
 //let store = createStore(reducers, applyMiddleware(thunkMiddleware));

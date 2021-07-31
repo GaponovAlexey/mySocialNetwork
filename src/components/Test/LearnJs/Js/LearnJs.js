@@ -1,15 +1,25 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addTodo, increment } from '../../../../Redux/jsreducer';
-import { decrement, removeLastTodo } from './../../../../Redux/jsreducer';
+import { submit } from 'redux-form';
+import { addTodo, decrement, increment, removeLastTodo } from './toolkitSlice';
 
 
 
+
+
+const addAsyncTodo = () => {
+	return addTodo('ASYNC TODO')
+}
+
+
+const addForm = () => {
+	return 
+}
 
 let Study = () => {
 
-	const count = useSelector(state => state.main.count)
-	const todos = useSelector(state => state.main.todos)
+	const count = useSelector(state => state.toolkit.count)
+	const todos = useSelector(state => state.toolkit.todos)
 	const dispatch = useDispatch()
 
 	return (
@@ -20,7 +30,12 @@ let Study = () => {
 				<button onClick={ () => dispatch(decrement()) } >decrement</button>
 				<button onClick={ () => dispatch(removeLastTodo()) } >removeLastTodo</button>
 				<button onClick={ () => dispatch(addTodo()) } >addTodo</button>
-				{/*<input value={payload} />*/}
+				<button onClick={ () => dispatch(addAsyncTodo()) } >Create Func</button>
+				<form>
+					<input  />
+					<button onClick={() => dispatch(addForm())} > push</button>
+				</form>
+				{/*<input value={payload} />*/ }
 				<ul>
 					{ todos.map((to) =>
 						<li>{ to }</li>

@@ -39,8 +39,7 @@ class NameForm extends React.Component {
 					<label>
 						name:
 						<input type='text' value={ this.state.value }
-							onChange={ this.handleChange }
-						/>
+							onChange={ this.handleChange }/>
 					</label>
 					<input type='submit' value='send' />
 				</form>
