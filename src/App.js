@@ -20,7 +20,7 @@ import LearnReactjs from './components/Test/LearnJs/LearnReactjs';
 import store from './Redux/redux-store';
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from 'react-redux';
-import Study from './components/Test/LearnJs/LearnJsx.jsx';
+import Study from './components/Test/LearnJs/LearnJs';
 
 
 

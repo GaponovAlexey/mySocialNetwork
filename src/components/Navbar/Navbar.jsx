@@ -17,25 +17,25 @@ const Navbar = (props) => {
         <NavLink to="/dialogs" activeClassName={ s.activelink }>Messages </NavLink>
       </div>
       <div className={ s.item }>
-        <NavLink to='users' activeClassName={ s.activelink } >Users</NavLink>
+        <NavLink to='/users' activeClassName={ s.activelink } >Users</NavLink>
       </div>
       <div className={ s.item }>
-        <NavLink to='News' activeClassName={ s.activelink }>News</NavLink>
+        <NavLink to='/News' activeClassName={ s.activelink }>News</NavLink>
       </div>
       <div className={ s.item }>
-        <NavLink to='KN' activeClassName={ s.activelink }>Game-k/n</NavLink>
+        <NavLink to='/KN' activeClassName={ s.activelink }>Game-k/n</NavLink>
       </div>
       <div className={ s.item }>
-        <NavLink to='test' activeClassName={ s.activelink } >html/css/form/mod</NavLink>
+        <NavLink to='/test' activeClassName={ s.activelink } >html/css/form/mod</NavLink>
       </div>
       <div className={ s.item }>
-        <NavLink to='Reactjs' activeClassName={ s.activelink } >LearnReactjs</NavLink>
+        <NavLink to='/Reactjs' activeClassName={ s.activelink } >LearnReactjs</NavLink>
       </div>
       <div className={ s.item }>
-        <NavLink to='LearnJsx' activeClassName={ s.activelink } >LearnJs</NavLink>
+        <NavLink to='/LearnJsx' activeClassName={ s.activelink } >LearnJs</NavLink>
       </div>
       <div className={ s.item }>
-        <NavLink to='one' activeClassName={ s.activelink } >Верстка</NavLink>
+        <NavLink to='/one' activeClassName={ s.activelink } >Верстка</NavLink>
       </div>
       <div>
         <br></br>
