@@ -1,17 +1,17 @@
 import React from 'react';
 import style from './LearnJs.module.css'
-import One from './Learn/1one';
-import Two from './Learn/2two-time';
-import Three from './Learn/3form is submit';
-import OffOn from './Learn/4off-on';
-import LoginControl from './Learn/5login';
-import Mailbox from './Learn/6myLogin';
-import MyMailBox from './Learn/7count';
-import Submit from './Learn/8Mailbox';
-import WarningBanner from './Learn/9Warning';
-import Map from './Learn/10set';
-import Blog from './Learn/11key';
-import Form from './Learn/12forms';
+import One from './study/1one';
+import Two from './study/2two-time';
+import Three from './study/3form is submit';
+import OffOn from './study/4off-on';
+import LoginControl from './study/5login';
+import Mailbox from './study/6myLogin';
+import MyMailBox from './study/7count';
+import Submit from './study/8Mailbox';
+import WarningBanner from './study/9Warning';
+import Map from './study/10set';
+import Blog from './study/11key';
+import Form from './study/12forms';
 
 
 const LearnJs = () => {

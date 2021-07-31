@@ -14,7 +14,7 @@ import { compose } from 'redux';
 import Preolader from './components/common/Preloader/Preloader';
 import One from './components/verstka/One';
 import TestConteiner from "./components/Test/testJs/TestConteiner";
-import LearnReactjs from './components/Test/LearnJs/LearnReactjs';
+import LearnReactjs from './components/Test/LearnJs/Learn/LearnReactjs';
 
 
 import store from './Redux/redux-store';
