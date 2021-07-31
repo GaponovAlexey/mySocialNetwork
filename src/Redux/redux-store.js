@@ -1,4 +1,4 @@
-import { applyMiddleware, combineReducers, createStore, compose } from "redux";
+import { applyMiddleware, combineReducers, configureStore, createStore, compose } from '@reduxjs/toolkit';
 import profileReducer from './profile-reducer';
 import dialogsReducer from './dialogs-reducer';
 import sidebar from './sidebar-reducer';
@@ -9,6 +9,7 @@ import thunkMiddleware from "redux-thunk";
 import { reducer as formReducer } from 'redux-form';
 import appReducer from "./appReducerNObag";
 import OneR from "./verska-reducer";
+import jsreducer from './jsreducer';
 
 let reducers = combineReducers({
     profilePage: profileReducer,
@@ -20,6 +21,8 @@ let reducers = combineReducers({
     form: formReducer,
     app: appReducer,
     oneR: OneR,
+    main: jsreducer,
+
 });
 
 
