@@ -12,9 +12,18 @@ import LinearIndeterminate from "../../../../utils/Validators/CirculeProgresTwo"
 
 export const Main = () => {
 	let dispatch = useDispatch()
+	const [searchValue, setSearchValue] = useState('')
+
 	let repos = useSelector(state => state.repos.items)
 	let isFetching = useSelector(state => state.repos.isFetching)
-const [searchValue, setSearchValue] = useState('')
+	let curntPage = useSelector(state => state.repos.curntPage)
+	let totalCount = useSelector(state => state.repos.totalCount)
+	let perPage = useSelector(state => state.repos.perPage)
+
+	const pages = [1, 2, 3, 4, 5, 6, 7, 8];
+
+
+
 
 
 	useEffect(() => {
@@ -28,16 +37,23 @@ const [searchValue, setSearchValue] = useState('')
 	return (
 		<div>
 			<div>
-				<TextField value={ searchValue } onChange={ (e) => setSearchValue(e.target.value)} placeholder='search' />
-				<StyledComponents onClick={() => searchHandler()} >Search</StyledComponents>
+				<TextField value={ searchValue }
+					onChange={ (e) => setSearchValue(e.target.value) }
+					placeholder='search' />
+				<StyledComponents onClick={ () => searchHandler() } >Search</StyledComponents>
 			</div><br />
 			{
-				isFetching === false ? 
-				repos.map(repo => <Repo repo={ repo } />) : 
-				<div>
+				isFetching === false ?
+					repos.map(repo => <Repo repo={ repo } />) :
+					<div>
 						<LinearIndeterminate />
-				</div>
+					</div>
 			}
+			<div>
+				{ pages.map((page, index) => <span
+				className={curntPage === page ?  'curentPage' : 'page'}
+				key={ index }>{ page }</span> )}
+			</div>
 
 
 		</div>

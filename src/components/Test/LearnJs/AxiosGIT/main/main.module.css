@@ -8,3 +8,8 @@
 	width: 100%;
 
 }
+
+.curentPage {
+	border: 2px solid gray;
+	font-weight: bold;
+}
