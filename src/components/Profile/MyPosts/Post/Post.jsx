@@ -1,3 +1,4 @@
+import { Avatar } from '@material-ui/core';
 import React from 'react';
 import s from './Post.module.css';
 
@@ -5,7 +6,7 @@ const Post = (props) => {
 
   return (
     <div className={s.item}>
-      <img alt='bnb' src='https://www.block-chain24.com/sites/default/files/crypto/binance-coin-bnb-icon-dark-crey-256x256_0.svg' />
+      <Avatar variant="square" alt="Remy Sharp" src='https://www.block-chain24.com/sites/default/files/crypto/binance-coin-bnb-icon-dark-crey-256x256_0.svg' />
       {props.message}
       {props.da4a}
       <div>

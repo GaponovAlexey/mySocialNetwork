@@ -1,4 +1,4 @@
-import { Button, CardMedia, Icon } from "@material-ui/core";
+import { Avatar, Button, CardMedia, Icon } from "@material-ui/core";
 import React from "react";
 import { Link, NavLink, Route, Router, Switch } from "react-router-dom";
 import LearnJs from "./LearnJs/Js/LearnJs";
@@ -13,6 +13,9 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import FabIntegrationSnackbar from './../utils/Validators/TabsMake';
+import Table from './LearnJs/table/table';
+import FlexLayoutGrid from './LearnJs/table/leyout';
 
 function TabPanel(props) {
 	const { children, value, index, ...other } = props;
@@ -54,6 +57,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
+
 export default function TestTitulRout() {
 	const classes = useStyles();
 	const [value, setValue] = React.useState(0);
@@ -67,7 +71,7 @@ export default function TestTitulRout() {
 			<AppBar position="static">
 				<Tabs value={ value } onChange={ handleChange } aria-label="simple tabs example">
 					<Tab label="Js" { ...a11yProps(0) } />
-					<Tab label="Item free" { ...a11yProps(1) } />
+					<Tab label="Table" { ...a11yProps(1) } />
 					<Tab label="Item free" { ...a11yProps(2) } />
 				</Tabs>
 			</AppBar>
@@ -79,14 +83,18 @@ export default function TestTitulRout() {
 						<NavLink className={ s.four } to='/oneTwoJS'>
 							<Button variant='contained' color='secondary'> oneTwo</Button>
 						</NavLink>
-						<NavLink className={ s.five } to='/'>
-							<Button variant='contained' color='secondary'> free</Button>
+						<NavLink className={ s.five } to='/axios'>
+							<Button variant='contained' color='secondary'> Axios</Button>
+						</NavLink>
+						<NavLink className={ s.five } to='/main'>
+							<Button variant='contained' color='secondary'> Main</Button>
 						</NavLink>
 					</NavLink>
 				</NavLink>
 			</TabPanel>
 			<TabPanel value={ value } index={ 1 }>
-				Item Two
+				<Table />
+				<FlexLayoutGrid />
 			</TabPanel>
 			<TabPanel value={ value } index={ 2 }>
 				Item Three

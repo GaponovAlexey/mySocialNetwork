@@ -10,6 +10,7 @@ import { reducer as formReducer } from 'redux-form';
 import appReducer from "./appReducerNObag";
 import OneR from "./verska-reducer";
 import toolkitSlice from '../components/Test/LearnJs/Js/toolkitSlice';
+import reposReducer  from './axiosGit';
 
 let reducers = combineReducers({
     profilePage: profileReducer,
@@ -22,6 +23,7 @@ let reducers = combineReducers({
     app: appReducer,
     oneR: OneR,
     toolkit: toolkitSlice,
+    repos: reposReducer,
 
 });
 

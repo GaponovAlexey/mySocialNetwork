@@ -1,4 +1,4 @@
-import React  from 'react';
+import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { Textarea } from '../../common/FormsControl/FormsControl';
 import { maxLenghtCreator, required } from '../../utils/Validators/validators';
@@ -37,11 +37,11 @@ const MyPostsReuduxForm = reduxForm({ form: 'MyPost' })(MyPostsForm)
 
 const MyPosts = props => {
   let PostsElements =
-     [...props.posts].reverse()
+    [...props.posts].reverse()
       .map(p => <Post
-      message={ p.message || p.newmessagebody }
-      key={ p.id }
-      likesCount={ p.likesCount } />)
+        message={ p.message || p.newmessagebody }
+        key={ p.id }
+        likesCount={ p.likesCount } />)
 
   let addPost = value => {
     props.addPost(value.newmessagebody);

@@ -9,7 +9,7 @@ let Paginator = (props) => {
 		pages.push(i);
 	}
 
-	return <div>
+	return <div >
 		{ pages.map(p => {
 			return <span
 				className={ props.currentPage === p && stules.SeletedPage }

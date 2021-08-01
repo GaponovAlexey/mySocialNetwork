@@ -1,6 +1,9 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import { Button, Tooltip } from '@material-ui/core';
+
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -19,6 +22,10 @@ export default function SimplePaper() {
 
 	return (
 		<div className={ classes.root }>
+			<CircularProgress disableShrink />
+			<Tooltip title="Add" arrow>
+				<Button >Arrow</Button>
+			</Tooltip>
 			<Paper elevation={ 0 } />
 			<Paper />
 			<Paper elevation={ 3 } />

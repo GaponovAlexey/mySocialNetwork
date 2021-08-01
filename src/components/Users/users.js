@@ -1,11 +1,18 @@
 import React from 'react';
 import Paginator from './Paginator';
 import User from './user';
+import BasicPagination from './mUIPaginator';
 
 
 let Users = (props) => {
 	return <div>
 		<div>
+			<BasicPagination 
+				totalUsersCount={ props.totalUsersCount }
+				pageSize={ props.pageSize }
+				currentPage={ props.currentPage }
+				onPageChanged={ props.onPageChanged } />
+				
 			<Paginator
 				totalUsersCount={ props.totalUsersCount }
 				pageSize={ props.pageSize }

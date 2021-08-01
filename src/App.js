@@ -23,6 +23,9 @@ import { Provider } from 'react-redux';
 import Study from './components/Test/LearnJs/Js/LearnJs';
 import TestTitulRout from './components/Test/TitulRout';
 import jsone from './components/Test/LearnJs/jsOne/one';
+import Table from './components/Test/LearnJs/table/table';
+import { Main } from './components/Test/LearnJs/AxiosGIT/main/main';
+import { Zapros } from './components/Test/LearnJs/AxiosGIT/main/axios';
 
 
 
@@ -54,6 +57,9 @@ class App extends React.Component {
           <Route path='/one' render={ () => <One /> } />
           <Route path='/JS' component={ Study } />
           <Route path='/oneTwoJS' component={ jsone } />
+          <Route path='/axios' component={ Zapros } />
+          <Route path='/main' component={ Main } />
+
         </div>
       </div>
     );
