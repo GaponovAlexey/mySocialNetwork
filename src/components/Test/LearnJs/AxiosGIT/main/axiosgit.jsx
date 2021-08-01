@@ -8,6 +8,7 @@ import { Button, Input, TextField } from "@material-ui/core";
 import StyledComponents from "../../../../utils/Validators/myButton";
 import CircularStatic from "../../../../utils/Validators/CirculeProgres";
 import LinearIndeterminate from "../../../../utils/Validators/CirculeProgresTwo";
+import { setCurentPage } from "../../../../../Redux/axiosGit";
 
 
 export const Main = () => {
@@ -27,11 +28,12 @@ export const Main = () => {
 
 
 	useEffect(() => {
-		dispatch(getRepos())
-	}, [])
+		dispatch(getRepos(searchValue, curntPage, perPage ))
+	}, [curntPage])
 
 	let searchHandler = () => {
-		dispatch(getRepos(searchValue))
+		dispatch(setCurentPage(1))
+		dispatch(getRepos(searchValue, curntPage, perPage))
 	}
 
 	return (
@@ -51,7 +53,8 @@ export const Main = () => {
 			}
 			<div>
 				{ pages.map((page, index) => <span
-				className={curntPage === page ?  'curentPage' : 'page'}
+				id={curntPage === page ? "curentPage" : "page" }
+				onClick={()=> dispatch(setCurentPage(page))}
 				key={ index }>{ page }</span> )}
 			</div>
 
