@@ -24,8 +24,8 @@ import Study from './components/Test/LearnJs/Js/LearnJs';
 import TestTitulRout from './components/Test/TitulRout';
 import jsone from './components/Test/LearnJs/jsOne/one';
 import Table from './components/Test/LearnJs/table/table';
-import { Main } from './components/Test/LearnJs/AxiosGIT/main/main';
-import { Zapros } from './components/Test/LearnJs/AxiosGIT/main/axios';
+import { Main } from './components/Test/LearnJs/AxiosGIT/main/axiosgit';
+import { Zapros } from './components/Test/LearnJs/AxiosGIT/Mains';
 
 
 

@@ -73,6 +73,9 @@ export default function TestTitulRout() {
 					<Tab label="Js" { ...a11yProps(0) } />
 					<Tab label="Table" { ...a11yProps(1) } />
 					<Tab label="Item free" { ...a11yProps(2) } />
+					<Tab label="Item free" { ...a11yProps(3) } />
+					<Tab label="Item free" { ...a11yProps(4) } />
+					<Tab label="Item free" { ...a11yProps(5) } />
 				</Tabs>
 			</AppBar>
 			<TabPanel value={ value } index={ 0 }>
@@ -84,10 +87,10 @@ export default function TestTitulRout() {
 							<Button variant='contained' color='secondary'> oneTwo</Button>
 						</NavLink>
 						<NavLink className={ s.five } to='/axios'>
-							<Button variant='contained' color='secondary'> Axios</Button>
+							<Button variant='contained' color='secondary'> main</Button>
 						</NavLink>
 						<NavLink className={ s.five } to='/main'>
-							<Button variant='contained' color='secondary'> Main</Button>
+							<Button variant='contained' color='secondary'> Axios top git</Button>
 						</NavLink>
 					</NavLink>
 				</NavLink>
