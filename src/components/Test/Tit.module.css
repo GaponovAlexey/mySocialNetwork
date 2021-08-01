@@ -1,0 +1,58 @@
+.block div {
+  display: grid;
+  border: 1px dashed #000;
+  grid-template-columns: repeat(1fr 1fr 1fr);
+  grid-template-rows: repeat(1fr 1fr 1fr 1fr);
+  margin: 0 left;
+  float: left;
+	grid-gap: 10px;
+	grid-template-rows: repeat(3, 3fr);
+  grid-template-areas:
+    "h i x"
+    "d c s"
+		"n c l"
+		"v b l";
+}
+
+/*.link {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}*/
+
+.gif {
+  videoid: "YOUR_VIDEO_ID";
+  videomuted: "true";
+}
+.one {
+	grid-area: h;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.two {
+	grid-area: d;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.three {
+	grid-area: n;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.four {
+		grid-area: i;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}

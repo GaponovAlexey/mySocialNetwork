@@ -32,7 +32,7 @@ const testReducer = (state = initialState, action) => {
       return state;
   }
 };
-export const sendMessge = () => ({ type: SEND_MESSAGE_TEST, });
+export const sendMessge = (text) => ({ type: SEND_MESSAGE_TEST, text });
 export const updateNewMessageText = (body) => ({
   type: UPDATE_NEW_MESSAGE_TEST, body: body
 });

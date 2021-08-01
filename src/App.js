@@ -21,6 +21,8 @@ import store from './Redux/redux-store';
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from 'react-redux';
 import Study from './components/Test/LearnJs/Js/LearnJs';
+import TestTitulRout from './components/Test/TitulRout';
+import oneTwoJS from './components/Test/LearnJs/jsOne/one';
 
 
 
@@ -43,13 +45,15 @@ class App extends React.Component {
           <Route path='/dialogs' render={ () => <DialogsConteiner /> } />
           <Route path="/profile/:userId?" render={ () => <ProfileConteiner /> } />
           <Route path='/users' render={ () => <UsersContainer /> } />
-          <Route path='/Test' render={ () => <TestConteiner /> } />
+          <Route path='/base' render={ () => <TestConteiner /> } />
           <Route path='/ReactJs' render={ () => <LearnReactjs /> } />
-          <Route path='/LearnJsx' render={ () => <Study /> } />
+          <Route path='/LearnJsx' render={ () => <TestTitulRout /> } />
           <Route path='/News' />
           <Route path='/login' render={ () => <LoginPage /> } />
           <Route path='/KN' render={ () => <KN /> } />
           <Route path='/one' render={ () => <One /> } />
+          <Route path='/JS' component={ Study } />
+          <Route path='/oneTwoJS' component={ oneTwoJS } />
         </div>
       </div>
     );
@@ -66,6 +70,8 @@ const mapStateToProps = (state) => ({
 let AppContainer = compose(
   withRouter(connect(mapStateToProps, { initializeApp })
     (App)));
+
+    
 
 const MainApp = (props) => {
   return <React.Fragment>

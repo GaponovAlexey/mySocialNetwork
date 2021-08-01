@@ -2,7 +2,7 @@ import React from 'react';
 import s from './test.module.css';
 import { NavLink } from 'react-router-dom';
 import poKaifu from '../../../asets/music/mp3/poKaifu.mp3';
-import video from '../../../asets/images/video.mp4';
+//import video from '../../../asets/images/video.mp4';
 
 const test = (props) => {
 
@@ -74,8 +74,8 @@ const test = (props) => {
 				</fieldset>
 				<audio src={ poKaifu } controls preload="metadata"></audio>
 				<article className='gif'>
-					<video autoplay='on' loop src={ video } width="400"></video>
-					<video autoplay='on' loop src={ video } width="400"></video>
+					{/*<video autoplay='on' loop src={ video } width="400"></video>
+					<video autoplay='on' loop src={ video } width="400"></video>*/}
 				</article>
 				<article>
 					<div>

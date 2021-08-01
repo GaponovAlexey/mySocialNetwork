@@ -7,17 +7,13 @@ class NavbarStatus extends React.Component {
 	}
 
 	activateEditMode = () => {
-		this.setState({
-			editmode: true
-		})
+		this.setState({ editmode: true })
 	}
 	deactivateEditMode = () => {
-		this.setState({
-			editmode: false,
-		})
-		this.props.updateStatus(this.state.status)
-	}
-	onStatusChange = (e) => {
+		this.setState({ editmode: false, })
+		this.props.updateStatus(this.state.status)}
+	
+		onStatusChange = (e) => {
 		this.setState({
 			status: e.currentTarget.value
 		})
