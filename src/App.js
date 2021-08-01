@@ -22,7 +22,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from 'react-redux';
 import Study from './components/Test/LearnJs/Js/LearnJs';
 import TestTitulRout from './components/Test/TitulRout';
-import oneTwoJS from './components/Test/LearnJs/jsOne/one';
+import jsone from './components/Test/LearnJs/jsOne/one';
 
 
 
@@ -53,7 +53,7 @@ class App extends React.Component {
           <Route path='/KN' render={ () => <KN /> } />
           <Route path='/one' render={ () => <One /> } />
           <Route path='/JS' component={ Study } />
-          <Route path='/oneTwoJS' component={ oneTwoJS } />
+          <Route path='/oneTwoJS' component={ jsone } />
         </div>
       </div>
     );

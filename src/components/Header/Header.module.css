@@ -1,24 +1,21 @@
-
 .header {
-    grid-area: h;
-    background-color: rgb(54, 100, 112);
-    border-radius: 5px;
-    
+  grid-area: h;
+  border-radius: 5px;
 }
-.cloc1 {
-    font-size: 20px;
-    color: orangered;
-    opacity: 0.8;
-    
-}
+
 
 .header img {
-    width: 85px;
+  width: 85px;
+  text-align: center;
 }
 
 .loginBlock {
-    float: right;
+  float: right;
 }
 .loginBlock a {
-    color: white;
+  color: white;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }

@@ -2,6 +2,7 @@ import { Box, Breadcrumbs, Button } from '@material-ui/core';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Clock from '../utils/Validators/Clock';
+import SimpleMenu from '../utils/Validators/openMenu';
 import s from './Navbar.module.css';
 
 
@@ -37,18 +38,13 @@ const Navbar = (props) => {
         </NavLink>
       </div>
       <div className={ s.item }>
-        <NavLink to='/test' activeClassName={ s.activelink } >
-          <Button variant="outlined" color="link" >JS-base</Button>
-        </NavLink>
-      </div>
-      <div className={ s.item }>
         <NavLink to='/LearnJsx' activeClassName={ s.activelink } >
           <Button variant="outlined" color="link" >JS-Learned</Button>
         </NavLink>
       </div>
       <div className={ s.item }>
-        <NavLink  to='/one' activeClassName={ s.activelink } >
-          <Button  variant="outlined" color="link" >JS-Верстка</Button>
+        <NavLink to='/one' activeClassName={ s.activelink } >
+          <Button variant="outlined" color="link" >JS-Верстка</Button>
         </NavLink>
       </div>
       <div>
@@ -66,8 +62,9 @@ const Navbar = (props) => {
       <br></br>
       <br></br>
       <div>
-        <Clock />
+      <SimpleMenu />
       </div>
+        <Clock />
     </nav>
   )
 }
