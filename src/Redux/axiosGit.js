@@ -1,47 +1,44 @@
-//import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
-//const counterSlice = createSlice({
-//	name: 'countses',
-//	initialState: {
-//		items: [],
-//		isFetching: true,
-//	},
+const counterSlice = createSlice({
+	name: 'countses',
+	initialState: {
+		items: [],
+		isFetching: true,
+	},
 
-
-
-
-
-//	reducers: {
-//		setCount(state, action) {
-//			state.count = action.payload
-//		},
-//		setRepos(state, action) {
-//			state.items = action.payload.items 
-//		},
-//	}
-//})
-
-//export default counterSlice.reducer
-//export const { setCount, setRepos } = counterSlice.actions
-
-
-const SET_REPOS = 'SET_REPOS'
-
-const defaulfState = {
-	items: [],
-	isFetching: true,
-}
-
-export default function reposReducer(state = defaulfState, action) {
-	switch (action.type) {
-		case SET_REPOS:
-			return {
-				...state,
-				items: action.payload.items
-			}
-			default:
-				return state
+	reducers: {
+		setRepos(state, action) {
+			state.items = action.payload.items
+			state.isFetching = false
+		},
+		setIsFetching(state, action) {
+			state.isFetching = action.payload
+		},
 	}
-}
+})
 
-export const setRepos = (repos) => ({ type: SET_REPOS, payload:repos})
+export default counterSlice.reducer
+export const { setRepos, setIsFetching } = counterSlice.actions
+
+
+//const SET_REPOS = 'SET_REPOS'
+
+//const defaulfState = {
+//	items: [],
+//	isFetching: true,
+//}
+
+//export default function reposReducer(state = defaulfState, action) {
+//	switch (action.type) {
+//		case SET_REPOS:
+//			return {
+//				...state,
+//				items: action.payload.items
+//			}
+//			default:
+//				return state
+//	}
+//}
+
+//export const setRepos = (repos) => ({ type: SET_REPOS, payload:repos})
