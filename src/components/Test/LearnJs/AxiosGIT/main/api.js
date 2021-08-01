@@ -9,7 +9,7 @@ export const getRepos = (searchQuery = "stars:%3E1", curentPage, perPage) => {
 
 	return async (dispatch) => {
 		dispatch(setIsFetching(true))
-		const response = await axios.get(`https://api.github.com/search/repositories?q=${searchQuery}&sort=stars&per_page=${perPage}&page=${curentPage}`)
+		const response = await axios.get(`https://api.github.com/search/repositories?q=${searchQuery}&sort=stars&per_page=${perPage = 30}&page=${curentPage}`)
 		dispatch(setRepos(response.data))
 	}
 }
