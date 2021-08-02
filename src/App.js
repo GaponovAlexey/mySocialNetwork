@@ -26,6 +26,7 @@ import jsone from './components/Test/LearnJs/jsOne/one';
 import Table from './components/Test/LearnJs/table/table';
 import { Main } from './components/Test/LearnJs/AxiosGIT/main/axiosgit';
 import { Zapros } from './components/Test/LearnJs/AxiosGIT/Mains';
+import Tusk from './components/Test/TaskOne/task';
 
 
 
@@ -59,6 +60,7 @@ class App extends React.Component {
           <Route path='/oneTwoJS' component={ jsone } />
           <Route path='/axios' component={ Zapros } />
           <Route path='/main' component={ Main } />
+          <Route path='/tuskOne' component={ Tusk } />
 
         </div>
       </div>

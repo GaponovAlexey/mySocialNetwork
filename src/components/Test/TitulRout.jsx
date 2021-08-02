@@ -1,9 +1,7 @@
-import { Avatar, Button, CardMedia, Icon } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import React from "react";
-import { Link, NavLink, Route, Router, Switch } from "react-router-dom";
-import LearnJs from "./LearnJs/Js/LearnJs";
+import { NavLink } from "react-router-dom";
 import s from './Tit.module.css';
-import video from './../../asets/images/game.mp4';
 
 
 import PropTypes from 'prop-types';
