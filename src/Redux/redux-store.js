@@ -11,6 +11,7 @@ import appReducer from "./appReducerNObag";
 import OneR from "./verska-reducer";
 import toolkitSlice from '../components/Test/LearnJs/Js/toolkitSlice';
 import reposReducer  from './axiosGit';
+import cliReduser from './../components/Test/TaskOne/redusTusk';
 
 let reducers = combineReducers({
     profilePage: profileReducer,
@@ -24,6 +25,7 @@ let reducers = combineReducers({
     oneR: OneR,
     toolkit: toolkitSlice,
     repos: reposReducer,
+    cli: cliReduser,
 
 });
 

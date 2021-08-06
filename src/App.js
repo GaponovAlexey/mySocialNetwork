@@ -26,7 +26,7 @@ import jsone from './components/Test/LearnJs/jsOne/one';
 import Table from './components/Test/LearnJs/table/table';
 import { Main } from './components/Test/LearnJs/AxiosGIT/main/axiosgit';
 import { Zapros } from './components/Test/LearnJs/AxiosGIT/Mains';
-import Tusk from './components/Test/TaskOne/task';
+import Tusk from './components/Test/TaskOne/taskOne';
 
 
 
@@ -84,6 +84,7 @@ let AppContainer = compose(
 const MainApp = (props) => {
   return <React.Fragment>
     <BrowserRouter>
+    
       <Provider store={ store }>
         <AppContainer />
       </Provider>
