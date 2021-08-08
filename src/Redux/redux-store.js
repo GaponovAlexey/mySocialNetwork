@@ -1,16 +1,16 @@
-import { applyMiddleware, combineReducers, configureStore, createStore, compose } from '@reduxjs/toolkit';
+import {  combineReducers, configureStore } from '@reduxjs/toolkit';
 import profileReducer from './profile-reducer';
 import dialogsReducer from './dialogs-reducer';
 import sidebar from './sidebar-reducer';
 import testReducer from './test-reducer';
 import usersReducer from "./users-reducer";
 import authReducer from "./auth-Reducer";
-import thunkMiddleware from "redux-thunk";
 import { reducer as formReducer } from 'redux-form';
 import appReducer from "./appReducerNObag";
 import OneR from "./verska-reducer";
 import toolkitSlice from '../components/Test/LearnJs/Js/toolkitSlice';
 import reposReducer  from './axiosGit';
+import counterSlice from './countReduxThink';
 
 let reducers = combineReducers({
     profilePage: profileReducer,
@@ -24,6 +24,7 @@ let reducers = combineReducers({
     oneR: OneR,
     toolkit: toolkitSlice,
     repos: reposReducer,
+    counter: counterSlice,
 
 });
 

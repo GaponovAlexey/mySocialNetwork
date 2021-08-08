@@ -12,7 +12,7 @@ const addAsyncTodo = () => {
 
 
 const addForm = () => {
-	return
+	return addTodo('')
 }
 
 let Study = () => {
@@ -33,7 +33,7 @@ let Study = () => {
 				<button onClick={ () => dispatch(addTodo()) } >addTodo</button>
 				<button onClick={ () => dispatch(addAsyncTodo()) } >Create Func</button>
 				<form>
-					<input />
+					<input  />
 					<button onClick={ () => dispatch(addForm()) } > push</button>
 				</form>
 				{/*<input value={payload} />*/ }
