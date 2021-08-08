@@ -46,6 +46,11 @@ const Navbar = (props) => {
         <NavLink to='/one' activeClassName={ s.activelink } >
           <Button  color="link" >JS-Верстка</Button>
         </NavLink>
+      </div><br/>
+      <div className={ s.item }>
+        <NavLink to='/tuskOne'  activeClassName={ s.activelink } >
+          <Button color="link" >TuskOne</Button>
+        </NavLink>
       </div>
       <div>
         <br></br>

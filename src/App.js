@@ -82,6 +82,7 @@ let AppContainer = compose(
 const MainApp = (props) => {
   return <React.Fragment>
     <BrowserRouter>
+    
       <Provider store={ store }>
         <AppContainer />
       </Provider>
