@@ -17,6 +17,7 @@ const Navbar = (props) => {
           <Button  color="link" >Profile</Button>
         </NavLink>
       </div>
+      
       <div className={ `${s.item} ${s.active}` }>
         <NavLink to="/dialogs" activeClassName={ s.activelink }>
           <Button  color="link" >Messages</Button>
