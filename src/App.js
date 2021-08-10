@@ -23,10 +23,9 @@ import { Provider } from 'react-redux';
 import Study from './components/Test/LearnJs/Js/LearnJs';
 import TestTitulRout from './components/Test/TitulRout';
 import jsone from './components/Test/LearnJs/jsOne/one';
-import Table from './components/Test/LearnJs/table/table';
 import { Main } from './components/Test/LearnJs/AxiosGIT/main/axiosgit';
 import { Zapros } from './components/Test/LearnJs/AxiosGIT/Mains';
-import Tusk from './components/Test/TaskOne/taskOne';
+import CounterDiv from './components/Test/threeTeme/counter';
 
 
 
@@ -60,8 +59,7 @@ class App extends React.Component {
           <Route path='/oneTwoJS' component={ jsone } />
           <Route path='/axios' component={ Zapros } />
           <Route path='/main' component={ Main } />
-          <Route path='/tuskOne' component={ Tusk } />
-
+          <Route path='/counter' component={ CounterDiv } />
         </div>
       </div>
     );
