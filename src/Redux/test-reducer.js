@@ -13,6 +13,7 @@ let initialState = {
   ],
   GenderText: '',
 };
+
 const testReducer = (state = initialState, action) => {
   switch (action.type) {
     case UPDATE_NEW_MESSAGE_TEST:
