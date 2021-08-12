@@ -12,11 +12,6 @@ import { IconButton, Menu } from '@material-ui/core';
 import DirectionsRunIcon from '@material-ui/icons/DirectionsRun';
 import SwipeableTemporaryDrawer from './headerPanel';
 
-
-
-
-
-
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,

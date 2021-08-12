@@ -1,10 +1,11 @@
 import React from 'react';
+import { useContext } from 'react';
 import stules from './Users.module.css';
 import userPhoto from '../../asets/images/ilon.jpg';
 import { NavLink } from 'react-router-dom';
 
 
-let User = ({ user, followingInProgress, unfollow, follow }) => {
+let User = ({ Clock, user, followingInProgress, unfollow, follow }) => {
 	return (
 		<div>
 			<span>
