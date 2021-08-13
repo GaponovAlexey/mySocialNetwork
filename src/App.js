@@ -15,8 +15,6 @@ import Preolader from './components/common/Preloader/Preloader';
 import One from './components/verstka/One';
 import TestConteiner from "./components/Test/testJs/TestConteiner";
 import LearnReactjs from './components/Test/LearnJs/Learn/LearnReactjs';
-
-
 import store from './Redux/redux-store';
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from 'react-redux';
@@ -77,12 +75,10 @@ let AppContainer = compose(
   withRouter(connect(mapStateToProps, { initializeApp })
     (App)));
 
-    
 
 const MainApp = (props) => {
   return <React.Fragment>
     <BrowserRouter>
-    
       <Provider store={ store }>
         <AppContainer />
       </Provider>
