@@ -1,8 +1,7 @@
-import { Button } from "@material-ui/core";
+import {  Button } from "@material-ui/core";
 import React from "react";
-import { NavLink } from "react-router-dom";
+import {  NavLink} from "react-router-dom";
 import s from './Tit.module.css';
-
 
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
@@ -11,9 +10,8 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import FabIntegrationSnackbar from './../utils/Validators/TabsMake';
 import Table from './LearnJs/table/table';
-import FlexLayoutGrid from './LearnJs/table/leyout';
+import CounterDiv from "./threeTeme/counter";
 
 function TabPanel(props) {
 	const { children, value, index, ...other } = props;
@@ -25,6 +23,7 @@ function TabPanel(props) {
 			id={ `simple-tabpanel-${index}` }
 			aria-labelledby={ `simple-tab-${index}` }
 			{ ...other }
+
 		>
 			{ value === index && (
 				<Box p={ 3 }>
@@ -70,7 +69,7 @@ export default function TestTitulRout() {
 				<Tabs value={ value } onChange={ handleChange } aria-label="simple tabs example">
 					<Tab label="Js" { ...a11yProps(0) } />
 					<Tab label="Table" { ...a11yProps(1) } />
-					<Tab label="Item free" { ...a11yProps(2) } />
+					<Tab label="My counter" { ...a11yProps(2) } />
 					<Tab label="Item free" { ...a11yProps(3) } />
 					<Tab label="Item free" { ...a11yProps(4) } />
 					<Tab label="Item free" { ...a11yProps(5) } />
@@ -95,9 +94,11 @@ export default function TestTitulRout() {
 			</TabPanel>
 			<TabPanel value={ value } index={ 1 }>
 				<Table />
-				<FlexLayoutGrid />
 			</TabPanel>
 			<TabPanel value={ value } index={ 2 }>
+				<CounterDiv />
+			</TabPanel>
+			<TabPanel value={ value } index={ 3 }>
 				Item Three
 			</TabPanel>
 		</div>
