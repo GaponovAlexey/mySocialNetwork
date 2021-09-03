@@ -25,12 +25,6 @@ import { Main } from './components/Test/LearnJs/AxiosGIT/main/axiosgit';
 import { Zapros } from './components/Test/LearnJs/AxiosGIT/Mains';
 import CounterDiv from './components/Test/threeTeme/counter';
 
-
-
-
-
-
-
 class App extends React.Component {
   componentDidMount() {
     this.props.initializeApp();
