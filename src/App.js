@@ -31,6 +31,7 @@ class App extends React.Component {
     this.props.initializeApp();
   }
 
+  
   render() {
     if (!this.props.initialized) {
       return <Preolader />
