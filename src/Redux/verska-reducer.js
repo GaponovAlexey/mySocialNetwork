@@ -4,6 +4,7 @@ const MAPKEY = 'MAPKEY/VERSTKA';
 
 let initialState = {
 	count: 0
+	
 };
 
 
