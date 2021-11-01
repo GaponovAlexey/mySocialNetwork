@@ -25,7 +25,6 @@ let reducers = combineReducers({
     toolkit: toolkitSlice,
     repos: reposReducer,
     counter: counterSlice,
-
 });
 
 
